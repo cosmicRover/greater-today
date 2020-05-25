@@ -1,17 +1,15 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import FlareComponent from "flare-react";
-import check from './orbis.flr';
+import React from "react";
+import SignInPage from './components/SignInPage.js'
+import firebase from "firebase";
+import firebaseConfig from "./keys.js";
 
 function App() {
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+
   return (
-    <FlareComponent
-      width={1750}
-      height={1500}
-      animationName="revolution"
-      file={check}
-    />
+    //need to conditionally navigate based on user authentication.
+      <SignInPage/>
   );
 }
 
