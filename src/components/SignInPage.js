@@ -33,7 +33,7 @@ const _signMeIn = () => {
   var uiConfig = {
     callbacks: {
       signInSuccessWithAuthResult: function (authResult, redirectUrl) {
-        console.log("SIGNIN SUCCESS!!!")
+        console.log("HERE *************");
         return true;
       },
       uiShown: function () {
