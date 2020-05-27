@@ -1,17 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import FlareComponent from "flare-react";
-import check from './orbis.flr';
+import React from "react";
+import SignInPage from "./components/SignInPage.js";
+import HomePage from "./components/HomePage";
+import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import { AuthProvider } from "./services/Auth.js";
+import PrivateRoute from "./routing/PrivateRoute.js";
 
 function App() {
+  // firebase.initializeApp(firebaseConfig);
+  // firebase.analytics();
+
+  // firebase.auth().onAuthStateChanged((user) => {
+  //   console.log(user.email);
+  // })
+
   return (
-    <FlareComponent
-      width={1750}
-      height={1500}
-      animationName="revolution"
-      file={check}
-    />
+    <AuthProvider>
+      <Router>
+          <PrivateRoute excat path="/" component={HomePage} />
+          <Route exact path="/signin" component={SignInPage} />
+      </Router>
+    </AuthProvider>
   );
 }
 
