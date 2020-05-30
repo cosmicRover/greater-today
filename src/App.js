@@ -16,7 +16,7 @@ function App() {
   return (
     <AuthProvider>
       <Router>
-          <PrivateRoute excat path="/" component={HomePage} />
+          <PrivateRoute exact path="/" component={HomePage} />
           <Route exact path="/signin" component={SignInPage} />
       </Router>
     </AuthProvider>
