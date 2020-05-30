@@ -1,25 +1,30 @@
 import React from "react";
-import SignInPage from "./components/SignInPage.js";
-import HomePage from "./components/HomePage";
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
-import { AuthProvider } from "./services/Auth.js";
-import PrivateRoute from "./routing/PrivateRoute.js";
+// import SignInPage from "./components/SignInPage.js";
+import GoalsContainer from "./components/supporting_components/GoalsContainer.js";
+import styled from "@emotion/styled";
+
 
 function App() {
-  // firebase.initializeApp(firebaseConfig);
-  // firebase.analytics();
+//TODO: Change global fonts
 
-  // firebase.auth().onAuthStateChanged((user) => {
-  //   console.log(user.email);
-  // })
+  const AppStyle = styled.div`
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    padding-top: 25px;
+  `;
 
   return (
-    <AuthProvider>
-      <Router>
-          <PrivateRoute excat path="/" component={HomePage} />
-          <Route exact path="/signin" component={SignInPage} />
-      </Router>
-    </AuthProvider>
+    // <AuthProvider>
+    //   <Router>
+    //       <PrivateRoute excat path="/" component={HomePage} />
+    //       <Route exact path="/signin" component={SignInPage} />
+    //   </Router>
+    // </AuthProvider>
+
+    <AppStyle>
+      <GoalsContainer />
+    </AppStyle>
   );
 }
 

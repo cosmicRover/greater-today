@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled';
-import firebase from '../firebase.js'
-import {AuthContext} from '../services/Auth.js'
+import firebase from '../../firebase.js'
+import {AuthContext} from '../../services/Auth.js'
 
 const HomePage = () => {
     const HomePageStyle = styled.div`
