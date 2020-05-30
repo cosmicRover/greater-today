@@ -5,6 +5,8 @@ import { AuthContext } from "../services/Auth";
 const PrivateRoute = ({ component: RouteComponent, ...rest }) => {
   //get current user
   const { currentUser } = React.useContext(AuthContext);
+  console.log("User status is "+ currentUser);
+  console.log(currentUser);
   return (
     <Switch>
       <Route
@@ -13,7 +15,7 @@ const PrivateRoute = ({ component: RouteComponent, ...rest }) => {
           !!currentUser ? (
             <RouteComponent {...routeProps} />
           ) : (
-            <Redirect to={"/signin/"} />
+            <Redirect to={"/signin"} />
           )
         }
       />

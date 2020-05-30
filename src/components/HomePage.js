@@ -16,7 +16,7 @@ const HomePage = () => {
 
     return (
     <HomePageStyle>
-        You are signed in OMG {currentUser.email}
+        <p>You are signed in OMG {currentUser.email}</p>
         <button onClick={() => {firebase.auth().signOut()}}>Sign OUT</button>
     </HomePageStyle>
     );
