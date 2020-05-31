@@ -12,6 +12,7 @@ function App() {
     display: flex;
     align-items: center;
     padding-top: 25px;
+    height: 90vh;
   `;
 
   return (
