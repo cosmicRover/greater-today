@@ -5,19 +5,15 @@ import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import { AuthProvider } from "./services/Auth.js";
 import PrivateRoute from "./routing/PrivateRoute.js";
 
-function App() {
-  // firebase.initializeApp(firebaseConfig);
-  // firebase.analytics();
-
-  // firebase.auth().onAuthStateChanged((user) => {
-  //   console.log(user.email);
-  // })
-
+const App = () => {
+  //need to mask transition with animation
   return (
     <AuthProvider>
       <Router>
-          <PrivateRoute exact path="/" component={HomePage} />
+        <div>
+          <PrivateRoute exact path="/home" component={HomePage} />
           <Route exact path="/signin" component={SignInPage} />
+        </div>
       </Router>
     </AuthProvider>
   );
