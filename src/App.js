@@ -1,26 +1,46 @@
-import React from "react";
+//import React from "react";
+import React, { useState } from 'react';
+import ReactDOM from 'react-dom';
 import SignInPage from "./components/SignInPage.js";
 import HomePage from "./components/HomePage";
+import PrivateRoute from "./routing/PrivateRoute.js";
+//import DrawerPage from "./components/DrawerPage.js";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import { AuthProvider } from "./services/Auth.js";
-import PrivateRoute from "./routing/PrivateRoute.js";
 
-function App() {
-  // firebase.initializeApp(firebaseConfig);
-  // firebase.analytics();
 
-  // firebase.auth().onAuthStateChanged((user) => {
-  //   console.log(user.email);
-  // })
+import { Button ,  Drawer} from 'antd';
+import './App.css';
 
-  return (
-    <AuthProvider>
-      <Router>
-          <PrivateRoute excat path="/" component={HomePage} />
-          <Route exact path="/signin" component={SignInPage} />
-      </Router>
-    </AuthProvider>
-  );
-}
-
+// function App() {
+  const App = () => {
+    const [visible, setVisible] = useState(false);
+  
+    const showDrawer = () => {
+      setVisible(true);
+    };
+  
+    const onClose = () => {
+      setVisible(false);
+    };
+  
+    return (
+  <div>
+      <Button type="primary" onClick={showDrawer}>
+      Open
+      </Button>
+      <Drawer
+        title="Basic Drawer"
+        placement="right"
+        closable={false}
+        onClose={onClose}
+        visible={visible}
+        >
+        <p>Some contents...</p>
+        <p>Some contents...</p>
+        <p>Some contents...</p>
+      </Drawer>
+  </div>
+    );
+  };
 export default App;

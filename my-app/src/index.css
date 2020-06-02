@@ -11,7 +11,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
-[data-theme='compact'] .ant-drawer-body p {
-  margin-bottom: 0;
-}
