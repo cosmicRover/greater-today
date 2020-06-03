@@ -1,37 +1,71 @@
 import React from "react";
-import PropTypes from "prop-types";
-import { makeStyles } from "@material-ui/core/styles";
-import ListItem from "@material-ui/core/ListItem";
-import ListItemText from "@material-ui/core/ListItemText";
-import { FixedSizeList } from "react-window";
+import { FixedSizeList as List } from "react-window";
 import styled from "@emotion/styled";
 import GoalsBody from "./GoalsBody.js";
-import ExpansionPanel from "@material-ui/core/ExpansionPanel";
+import InfiniteLoader from "react-window-infinite-loader";
+import AutoSizer from "react-virtualized-auto-sizer";
 
-const RenderRowStyle = styled.div`
-  width: 100%;
-  height: auto;
-`;
+//listview goes here
+function GoalsDataModel( title, content ){
+  this.title = title;
+  this.content = content;
+};
 
-const RenderRow = ({ key }) => {
+var list = [
+  new GoalsDataModel("Clean rooms with magic.", ["Buy a broom"]),
+  new GoalsDataModel("Walk my doggo.", ["Steal a doggo"]),
+  new GoalsDataModel("Finish my essay about burritos", [
+    "What is a burrito?",
+    " Determine why I need this",
+  ]),
+];
+
+//inject row data here
+const GoalsBodyRenderer = ({ index }) => {
+  const GoalsBodyStyle = styled.div`
+    padding-bottom: 13px;
+  `;
+
   return (
-    <RenderRowStyle>
-      <ListItem key={key}>
-        <GoalsBody />
-      </ListItem>
-    </RenderRowStyle>
+    <GoalsBodyStyle>
+      <GoalsBody
+        title={list[index].title}
+        id={index}
+        content={list[index].content}
+      />
+    </GoalsBodyStyle>
   );
 };
 
-// RenderRow.propTypes = {
-//   index: PropTypes.number.isRequired,
-//   style: PropTypes.object.isRequired,
-// };
+//only concerned about rendering
+const VirtualizedList = () => {
+  const RenderRowStyle = styled.div`
+    width: 100%;
+    height: auto;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-top: 13px;
+    padding-left: 21px;
+    padding-right: 21px;
+  `;
 
-export default function VirtualizedList() {
   return (
-      <FixedSizeList height={750} width={500} itemSize={48} itemCount={200}>
-        {RenderRow}
-      </FixedSizeList>
+    <AutoSizer>
+      {({ height, width }) => (
+        <RenderRowStyle>
+          <List
+            height={height - 100}
+            itemCount={list.length}
+            itemSize={10}
+            width={width}
+          >
+            {GoalsBodyRenderer}
+          </List>
+        </RenderRowStyle>
+      )}
+    </AutoSizer>
   );
-}
+};
+
+export default VirtualizedList;

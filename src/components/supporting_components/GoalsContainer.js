@@ -4,14 +4,6 @@ import GoalsTitle from "./GoalsTitle.js";
 import GoalsBody from "./GoalsBody.js";
 import VirtualizedList from "./ScrollDemo.js";
 
-//material imports
-// import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-import ListItemText from "@material-ui/core/ListItemText";
-
-//listview goes here
-const list = ["Clean room", "Walk the dog", "Finish Essay", "Leave planet"];
-
 const GoalsContainer = ({ title }) => {
   const GoalsContainerStyle = styled.div`
     flex-direction: column;
