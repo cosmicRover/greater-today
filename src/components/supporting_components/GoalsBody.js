@@ -7,19 +7,30 @@ import ExpansionPanel from "@material-ui/core/ExpansionPanel";
 import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary";
 import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails";
 import Typography from "@material-ui/core/Typography";
-import logo from "../../logo.svg";
 
 const GoalsBody = ({ title, id, content }) => {
   const GoalsBodyStyle = styled.div`
-    top: 408px;
-    left: 1066px;
-    width: 95%;
+    width: 100%;
     height: auto;
 
     background: #ffffff 0% 0% no-repeat padding-box;
     box-shadow: 0px 5px 6px #00000029;
     border-radius: 16px;
     opacity: 1;
+  `;
+
+  const StatsStyle = styled.div`
+    top: 421px;
+    left: 1472px;
+    width: 22px;
+    height: 11px;
+    
+    color: #ffffff;
+    opacity: 1;
+  `;
+
+  const GoalsCheckboxStyle = styled.div`
+    padding-left: 8px;
   `;
 
   //ooof gotta refactor and embed in a scroll view
@@ -32,7 +43,9 @@ const GoalsBody = ({ title, id, content }) => {
         onClick={() => console.log(`Clicked on id: ${id}`)}
       >
         <ExpansionPanelSummary
-          expandIcon={logo.svg}
+          
+          
+          // expandIcon={<img src={logo} width={32} height={24}></img>}
           aria-controls="additional-actions1-content"
           id="additional-actions1-header"
         >
@@ -41,14 +54,23 @@ const GoalsBody = ({ title, id, content }) => {
             onClick={(event) => event.stopPropagation()}
             onFocus={(event) => event.stopPropagation()}
             control={<Checkbox />}
-            label=""
+            label={title}
           />
+          
 
-          <Typography>{title}</Typography>
+
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
-          <Checkbox />
-          <Typography>{content}</Typography>
+          <GoalsCheckboxStyle>
+           
+            <FormControlLabel
+              aria-label="Acknowledge"
+              onClick={(event) => event.stopPropagation()}
+              onFocus={(event) => event.stopPropagation()}
+              control={<Checkbox />}
+              label={content}
+            />
+          </GoalsCheckboxStyle>
         </ExpansionPanelDetails>
       </ExpansionPanel>
     </GoalsBodyStyle>

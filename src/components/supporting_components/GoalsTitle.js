@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
+import left_rab from "../../assets/left_rab.svg";
+import right_rab from "../../assets/right_rab.svg";
 
 const GoalsTitle = ({ title }) => {
   const GoalsTitleStyle = styled.div`
@@ -11,20 +13,21 @@ const GoalsTitle = ({ title }) => {
     box-shadow: 5px 5px 6px #00000029;
     border-radius: 25px 25px 0px 0px;
     opacity: 1;
-
-    align-items: center;
     display: flex;
     justify-content: space-around;
-
     color: white;
     font-size: 22px;
   `;
 
+  // var style = {
+  //   align-content: "center"
+  // }
+
   return (
     <GoalsTitleStyle>
-      <span></span>
+      <span>{<img src={left_rab}></img>}</span>
       <span>{title}</span>
-      <span></span>
+      <span>{<img src={right_rab}></img>}</span>
     </GoalsTitleStyle>
   );
 };
