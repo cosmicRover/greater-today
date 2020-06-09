@@ -14,19 +14,19 @@ const GoalsTitle = ({ title }) => {
     border-radius: 25px 25px 0px 0px;
     opacity: 1;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     color: white;
-    font-size: 22px;
+    font-size: 34px;
   `;
 
-  // var style = {
-  //   align-content: "center"
-  // }
+  const titleStyle = {
+    margin: "7px",
+  };
 
   return (
     <GoalsTitleStyle>
       <span>{<img src={left_rab}></img>}</span>
-      <span>{title}</span>
+      <span style={titleStyle}>{title}</span>
       <span>{<img src={right_rab}></img>}</span>
     </GoalsTitleStyle>
   );

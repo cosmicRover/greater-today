@@ -3,12 +3,27 @@ import styled from "@emotion/styled";
 import GoalsTitle from "./GoalsTitle.js";
 import VirtualizedList from "./ScrollDemo.js";
 
+//return list based on the bool value
+const displayList = (isShortTerm) => {
+  return isShortTerm ? (
+    <>
+      <GoalsTitle title="Short Term Goals" />
+      <VirtualizedList />
+    </>
+  ) : (
+    <>
+      <GoalsTitle title="Long Term Goals" />
+      <VirtualizedList />
+    </>
+  );
+};
+
 const GoalsContainer = ({ title }) => {
   const GoalsContainerStyle = styled.div`
     flex-direction: column;
-    min-width: 535px;
+    min-width: 817px;
     height: 100vh;
-    background: #f1f3f5 0% 0% no-repeat padding-box;
+    background: #fffef0 0% 0% no-repeat padding-box;
     box-shadow: 5px 5px 6px #00000029;
     border-radius: 30px;
     opacity: 1;
@@ -16,13 +31,9 @@ const GoalsContainer = ({ title }) => {
     display: flex;
   `;
 
-  return (
-    <GoalsContainerStyle>
-      <GoalsTitle title="Short Term" />
+  //need to implement tab switching here
 
-      <VirtualizedList />
-    </GoalsContainerStyle>
-  );
+  return <GoalsContainerStyle>{displayList(false)}</GoalsContainerStyle>;
 };
 
 export default GoalsContainer;

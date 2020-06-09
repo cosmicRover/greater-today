@@ -19,18 +19,13 @@ const GoalsBody = ({ title, id, content }) => {
     opacity: 1;
   `;
 
-  const StatsStyle = styled.div`
-    top: 421px;
-    left: 1472px;
-    width: 22px;
-    height: 11px;
-    
-    color: #ffffff;
-    opacity: 1;
-  `;
+  const EPStyle = {
+    borderRadius: "16px",
+  };
 
   const GoalsCheckboxStyle = styled.div`
     padding-left: 8px;
+    border: 'none';
   `;
 
   //ooof gotta refactor and embed in a scroll view
@@ -39,12 +34,11 @@ const GoalsBody = ({ title, id, content }) => {
       <span>{}</span>
 
       <ExpansionPanel
+        style={EPStyle}
         TransitionProps={{ unmountOnExit: true }}
         onClick={() => console.log(`Clicked on id: ${id}`)}
       >
         <ExpansionPanelSummary
-          
-          
           // expandIcon={<img src={logo} width={32} height={24}></img>}
           aria-controls="additional-actions1-content"
           id="additional-actions1-header"
@@ -56,13 +50,9 @@ const GoalsBody = ({ title, id, content }) => {
             control={<Checkbox />}
             label={title}
           />
-          
-
-
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
           <GoalsCheckboxStyle>
-           
             <FormControlLabel
               aria-label="Acknowledge"
               onClick={(event) => event.stopPropagation()}

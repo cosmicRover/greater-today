@@ -13,6 +13,8 @@ function App() {
     align-items: center;
     padding-top: 25px;
     height: 90vh;
+    min-width: 817px;
+    background: #FFFEF0 0% 0% no-repeat padding-box;
   `;
 
   return (
