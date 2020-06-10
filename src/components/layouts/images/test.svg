@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="66" height="80" viewBox="0 0 96 90">
+  <defs>
+    <filter id="Ellipse_1" x="0" y="0" width="96" height="90" filterUnits="userSpaceOnUse">
+      <feOffset dx="5" dy="5" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Polygon_30" x="14" y="17" width="58" height="57" filterUnits="userSpaceOnUse">
+      <feOffset dy="5" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-2"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_269" data-name="Group 269" transform="translate(-31 -28)">
+    <g id="Group_135" data-name="Group 135" transform="translate(-64 8)">
+      <g id="Group_60" data-name="Group 60">
+        <g id="Group_49" data-name="Group 49" transform="translate(-41 -15)" opacity="0.48">
+          <g transform="matrix(1, 0, 0, 1, 136, 35)" filter="url(#Ellipse_1)">
+            <ellipse id="Ellipse_1-2" data-name="Ellipse 1" cx="39" cy="36" rx="39" ry="36" transform="translate(4 4)" fill="#fff" opacity="0.33"/>
+          </g>
+          <ellipse id="Ellipse_2" data-name="Ellipse 2" cx="30" cy="27.5" rx="30" ry="27.5" transform="translate(149 48)" fill="#fff" opacity="0.59"/>
+        </g>
+      </g>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 31, 28)" filter="url(#Polygon_30)">
+      <path id="Polygon_30-2" data-name="Polygon 30" d="M18.142,4.657a2,2,0,0,1,3.715,0l3.416,8.565a2,2,0,0,0,1.149,1.129l8.645,3.278a2,2,0,0,1,0,3.74l-8.645,3.278a2,2,0,0,0-1.149,1.129l-3.416,8.565a2,2,0,0,1-3.715,0l-3.416-8.565a2,2,0,0,0-1.149-1.129L4.932,21.37a2,2,0,0,1,0-3.74l8.645-3.278a2,2,0,0,0,1.149-1.129Z" transform="translate(23 21)" fill="#fff"/>
+    </g>
+  </g>
+</svg>
