@@ -1,8 +1,9 @@
 
 import React from "react";
 // import SignInPage from "./components/SignInPage.js";
-import GoalsContainer from "./components/supporting_components/GoalsContainer.js";
+import GoalsContainer from "./components/goals_components/GoalsContainer.js";
 import styled from "@emotion/styled";
+import ApplicationRoutes from "./components/side_panel_component/ApplicationRoutes";
 
 
 function App() {
@@ -25,10 +26,10 @@ function App() {
     //   </Router>
     // </AuthProvider>
 
-    <AppStyle>
-      <GoalsContainer />
-    </AppStyle>
+    <ApplicationRoutes/>
   );
 }
+
+export default App;
 
 
