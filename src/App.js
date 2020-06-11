@@ -1,3 +1,4 @@
+
 import React from "react";
 // import SignInPage from "./components/SignInPage.js";
 import GoalsContainer from "./components/supporting_components/GoalsContainer.js";
@@ -30,4 +31,4 @@ function App() {
   );
 }
 
-export default App;
+
