@@ -17,6 +17,7 @@ const GoalsTitle = ({ title }) => {
     justify-content: space-between;
     color: white;
     font-size: 34px;
+    overflow: hidden;
   `;
 
   const titleStyle = {

@@ -39,7 +39,7 @@ var list = [
 const VirtualizedList = ({ index }) => {
   const GoalsBodyStyle = styled.div`
     padding-top: 13px;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
     width: 92%;
     height: auto;
     align-items: center;

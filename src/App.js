@@ -12,8 +12,7 @@ function App() {
     display: flex;
     align-items: center;
     padding-top: 25px;
-    height: 90vh;
-    min-width: 817px;
+    height: 99vh;
     background: #FFFEF0 0% 0% no-repeat padding-box;
   `;
 

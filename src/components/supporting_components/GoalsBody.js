@@ -12,14 +12,12 @@ const GoalsBody = ({ title, id, content }) => {
   const GoalsBodyStyle = styled.div`
     width: 100%;
     height: auto;
-
-    background: #ffffff 0% 0% no-repeat padding-box;
     box-shadow: 0px 5px 6px #00000029;
     border-radius: 16px;
     opacity: 1;
   `;
 
-  const EPStyle = {
+  const ExpansionPanelStyle = {
     borderRadius: "16px",
   };
 
@@ -34,7 +32,7 @@ const GoalsBody = ({ title, id, content }) => {
       <span>{}</span>
 
       <ExpansionPanel
-        style={EPStyle}
+        style={ExpansionPanelStyle}
         TransitionProps={{ unmountOnExit: true }}
         onClick={() => console.log(`Clicked on id: ${id}`)}
       >
