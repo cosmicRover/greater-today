@@ -16,7 +16,7 @@ const GoalsTitle = ({ title }) => {
     display: flex;
     justify-content: space-between;
     color: white;
-    font-size: 34px;
+    font-size: 24px;
     overflow: hidden;
   `;
 

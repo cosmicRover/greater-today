@@ -9,14 +9,11 @@ import ApplicationRoutes from "./components/side_panel_component/ApplicationRout
 function App() {
 //TODO: Change global fonts
 
-  const AppStyle = styled.div`
-    flex-direction: column;
-    display: flex;
-    align-items: center;
-    padding-top: 25px;
-    height: 99vh;
-    background: #FFFEF0 0% 0% no-repeat padding-box;
-  `;
+  const ContentStyle = styled.div`
+  
+  height: 100vh;
+  background: transparent linear-gradient(0deg, #FFFEF0 0%, #9EE8EB 100%) 0% 0% no-repeat padding-box;
+`;
 
   return (
     // <AuthProvider>
@@ -26,7 +23,8 @@ function App() {
     //   </Router>
     // </AuthProvider>
 
-    <ApplicationRoutes/>
+      <ApplicationRoutes />
+    
   );
 }
 

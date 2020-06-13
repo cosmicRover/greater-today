@@ -30,7 +30,11 @@ class SideNav extends React.Component {
   render() {
     return (
       <Menu className="menu-theme" defaultSelectedKeys={["1"]} mode="inline">
-        <Menu.Item key="1" icon={<HomeOutlined />}>
+        <Menu.Item
+          key="1"
+          icon={<HomeOutlined />
+          }
+        >
           Overview
         </Menu.Item>
         <Menu.Item key="2" icon={<UserOutlined />}>

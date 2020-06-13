@@ -4,18 +4,18 @@ import React from "react";
 import SideNav from "./sidebar";
 import DrawerSection from "./drawer";
 import { Layout, Button, Breadcrumb, Drawer, Progress } from "antd";
-import GoalsContainer from '../goals_components/GoalsContainer'
-import styled from '@emotion/styled'
+import GoalsContainer from "../goals_components/GoalsContainer";
+import styled from "@emotion/styled";
 
 const { Header, Content, Sider, Footer } = Layout;
 
-const AppStyle = styled.div`
+const ContentStyle = styled.div`
   flex-direction: column;
   display: flex;
   align-items: center;
   padding-top: 25px;
-  height: 99vh;
-  background: #fffef0 0% 0% no-repeat padding-box;
+  height: 100%;
+  background: transparent linear-gradient(0deg, #FFFEF0 0%, #9EE8EB 100%) 0% 0% no-repeat padding-box;
 `;
 
 class ApplicationRoutes extends React.Component {
@@ -40,6 +40,12 @@ class ApplicationRoutes extends React.Component {
           <div className="logo" />
           <SideNav />
         </Sider>
+
+        <Content>
+          <ContentStyle>
+            <GoalsContainer />
+          </ContentStyle>
+        </Content>
       </Layout>
     );
   }

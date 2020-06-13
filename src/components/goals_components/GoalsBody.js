@@ -7,6 +7,7 @@ import ExpansionPanel from "@material-ui/core/ExpansionPanel";
 import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary";
 import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails";
 import Typography from "@material-ui/core/Typography";
+import expansion_button from '../../assets/group.svg'
 
 const GoalsBody = ({ title, id, content }) => {
   const GoalsBodyStyle = styled.div`
@@ -29,7 +30,7 @@ const GoalsBody = ({ title, id, content }) => {
   //ooof gotta refactor and embed in a scroll view
   return (
     <GoalsBodyStyle>
-      <span>{}</span>
+      {/* <span>{<text>Hello</text>}</span> */}
 
       <ExpansionPanel
         style={ExpansionPanelStyle}
@@ -37,7 +38,7 @@ const GoalsBody = ({ title, id, content }) => {
         onClick={() => console.log(`Clicked on id: ${id}`)}
       >
         <ExpansionPanelSummary
-          // expandIcon={<img src={logo} width={32} height={24}></img>}
+          expandIcon={<img src={expansion_button} width={25} height={19}></img>}
           aria-controls="additional-actions1-content"
           id="additional-actions1-header"
         >

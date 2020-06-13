@@ -40,7 +40,7 @@ const VirtualizedList = ({ index }) => {
   const GoalsBodyStyle = styled.div`
     padding-top: 13px;
     /* overflow-y: scroll; */
-    width: 92%;
+    width: 100%;
     height: auto;
     align-items: center;
     display: flex;
