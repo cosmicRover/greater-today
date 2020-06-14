@@ -5,10 +5,11 @@ import right_rab from "../../assets/right_rab.svg";
 
 const GoalsTitle = ({ title }) => {
   const GoalsTitleStyle = styled.div`
-    top: 339px;
-    left: 1045px;
+    top: auto;
+    left: auto;
     width: 100%;
     height: 56px;
+    position: sticky;
     background: #5c7cf8 0% 0% no-repeat padding-box;
     box-shadow: 5px 5px 6px #00000029;
     border-radius: 25px 25px 0px 0px;

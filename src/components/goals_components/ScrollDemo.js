@@ -41,7 +41,7 @@ const VirtualizedList = ({ index }) => {
     padding-top: 13px;
     /* overflow-y: scroll; */
     width: 100%;
-    height: auto;
+    max-height: auto;
     align-items: center;
     display: flex;
     flex-direction: column;

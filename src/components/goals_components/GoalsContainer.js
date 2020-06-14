@@ -10,17 +10,27 @@ import { makeStyles, useTheme } from '@material-ui/core/styles';
 import { yellow } from "@material-ui/core/colors";
 import { colors } from "@material-ui/core";
 
+
+const GoalsOnlyContainer = styled.div`
+  max-height:25rem;
+  overflow: scroll;
+`;
+
 //return list based on the bool value
 const displayList = ({ isShortTerm }) => {
   return isShortTerm ? (
     <>
       <GoalsTitle title="Short Term Goals" />
+      <GoalsOnlyContainer>
       <VirtualizedList />
+      </GoalsOnlyContainer>
     </>
   ) : (
       <>
         <GoalsTitle title="Long Term Goals" />
+        <GoalsOnlyContainer>
         <VirtualizedList />
+        </GoalsOnlyContainer>
       </>
     );
 };
@@ -60,9 +70,9 @@ const GoalsContainer = ({ title }) => {
   `;
 
   const DummyTabStyle = styled.div`
-    top: 151px;
-    left: 802px;
-    width: 148px;
+    top: auto;
+    left: auto;
+    width: auto;
     height: 48px;
     background: #5C7CF8 0% 0% no-repeat padding-box;
     box-shadow: 0px 5px 10px #00000029;
@@ -72,9 +82,9 @@ const GoalsContainer = ({ title }) => {
   `;
 
   const OverviewTextStyle = styled.div`
-    left: 773px;
-    width: 343px;
-    height: 57px;
+    left: auto;
+    width: auto;
+    height: 50px;
     text-align: left;
     font: Bold 50px/67px Utile;
     letter-spacing: 0px;
