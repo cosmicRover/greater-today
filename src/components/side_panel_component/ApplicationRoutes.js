@@ -1,54 +1,48 @@
-import React from "react";
-//import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
-// import "../App.css";
+import React, { Component } from "react";
+import { BrowserRouter as Router, Route, Link, Switch, BrowserRouter } from "react-router-dom";
+import { Layout, Menu} from "antd";
+// import {Button, Breadcrumb, Drawer, Progress } from "antd";
+
 import SideNav from "./sidebar";
 import DrawerSection from "./drawer";
-import { Layout, Button, Breadcrumb, Drawer, Progress } from "antd";
-import GoalsContainer from "../goals_components/GoalsContainer";
-import styled from "@emotion/styled";
+import ProfilePage from '../main_components/profilePage'
+import Overview from '../goals_components/GoalsContainerPage'
+import Store from '../main_components/Store'
+import Achievements from '../main_components/Achievements'
+import Friends from '../main_components/Friends'
 
-const { Header, Content, Sider, Footer } = Layout;
+import "antd/dist/antd.css";
 
-const ContentStyle = styled.div`
-  flex-direction: column;
-  display: flex;
-  align-items: center;
-  padding-top: 25px;
-  height: 100%;
-  background: transparent linear-gradient(0deg, #FFFEF0 0%, #9EE8EB 100%) 0% 0% no-repeat padding-box;
-`;
+const { Header, Content, Footer, Sider } = Layout;
 
-class ApplicationRoutes extends React.Component {
-  //CODE FOR MENU COLLAPSE BUTTON
+class RouterApp extends Component {
   state = {
-    collapsed: true,
+    collapsed: false
   };
 
-  onCollapse = (collapsed) => {
-    console.log(collapsed);
+  onCollapse = collapsed => {
     this.setState({ collapsed });
+  };
+  toggle = () => {
+    this.setState({
+      collapsed: !this.state.collapsed
+    });
   };
 
   render() {
     return (
-      <Layout style={{ minHeight: "100vh" }}>
-        <Sider
-          collapsible
-          collapsed={this.state.collapsed}
-          onCollapse={this.onCollapse}
-        >
-          <div className="logo" />
-          <SideNav />
-        </Sider>
-
-        <Content>
-          <ContentStyle>
-            <GoalsContainer />
-          </ContentStyle>
-        </Content>
-      </Layout>
+      <BrowserRouter>
+        <div>
+          <Switch>
+            <Route  exact path='/' component={Overview} />
+            <Route   path="/profilePage" component={ProfilePage}/> 
+            <Route   path="/friends" component={Friends}/> 
+            <Route   path="/achievements" component={Achievements}/>
+            <Route   path="/store" component={Store}/>
+        </Switch> 
+        </div>      
+      </BrowserRouter>   
     );
   }
 }
-
-export default ApplicationRoutes;
+export default RouterApp;

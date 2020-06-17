@@ -4,6 +4,8 @@ import React from "react";
 import GoalsContainer from "./components/goals_components/GoalsContainer.js";
 import styled from "@emotion/styled";
 import ApplicationRoutes from "./components/side_panel_component/ApplicationRoutes";
+import SideNav from "./components/side_panel_component/sidebar.js";
+
 
 
 function App() {
@@ -22,8 +24,13 @@ function App() {
     //       <Route exact path="/signin" component={SignInPage} />
     //   </Router>
     // </AuthProvider>
-
-      <ApplicationRoutes />
+    
+    
+    <ApplicationRoutes>
+    <SideNav/>
+    </ApplicationRoutes>
+    
+    
     
   );
 }
