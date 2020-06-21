@@ -96,9 +96,12 @@
     padding: 30px;
   }
     [data-theme="dark"] .site-statistic-demo-card {
-      background: #303030;
+      background: #5B7BF8;
     }
 
+.ant-menu-dark .ant-menu-inline.ant-menu-sub{
+    background: #5B7BF8;
+}
 /****** RESPONSIVE MEDIA QUERRIES ******/
 /* Portrait */
 @media only screen 
@@ -167,3 +170,4 @@
     }
     /* ant-menu menu-theme ant-menu-light ant-menu-inline-collapsed ant-menu-root ant-menu-vertical */
   }
+ 

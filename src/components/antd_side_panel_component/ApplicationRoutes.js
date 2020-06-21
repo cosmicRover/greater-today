@@ -14,10 +14,14 @@ import {
 
 
 import GoalsContainer from '../main_components/goals_components/GoalsContainer'
+import Profile from '../main_components/profile_components/profilePage'
+import ProfileStats from '../main_components/profile_components/profileStats'
 import Store from '../main_components/store_components/Store'
+import Friends from '../main_components/friends_components/friends'
+import Achievements from '../main_components/achievements_components/achievements'
 import "antd/dist/antd.css";
 const { Sider } = Layout;
-
+const { SubMenu } = Menu;
 const ContentStyle = styled.div`
  flex-direction: column;
  display: flex;
@@ -35,9 +39,30 @@ const StyledContainer = (route) => {
   );
 }
 
-const StyledStore = (route) => {
+const StyledProfile= (route) => {
+  return (
+    <ContentStyle><Profile /></ContentStyle>
+  );
+}
+const StyledStore= (route) => {
   return (
     <ContentStyle><Store /></ContentStyle>
+  );
+}
+const StyledAchievements= (route) => {
+  return (
+    <ContentStyle><Achievements /></ContentStyle>
+  );
+}
+const StyledFriends= (route) => {
+  return (
+    <ContentStyle><Friends /></ContentStyle>
+  );
+}
+
+const StyledProfileStats= (route) => {
+  return (
+    <ContentStyle><ProfileStats /></ContentStyle>
   );
 }
 
@@ -64,7 +89,7 @@ class RouterApp extends Component {
             collapsed={this.state.collapsed}
             onCollapse={this.onCollapse}
           >
-
+          <div className="logo" />
             <Menu theme="dark" defaultSelectedKeys={["1"]} mode="inline">
               <Menu.Item key="1">
                 <HomeOutlined />
@@ -72,16 +97,44 @@ class RouterApp extends Component {
                 <Link to="/" />
 
               </Menu.Item>
+              <SubMenu key="sub1" icon={< UserOutlined />} title="Profile">
               <Menu.Item key="2">
-                <TeamOutlined />
-                <span>Store</span>
-                <Link to="/store" />
+                <span>Profile</span>
+                <Link to="/profile" />
               </Menu.Item>
+              <Menu.Item key="2">
+              <span>Your Goals</span>
+              <Link to="/profile-stats" />
+            </Menu.Item>
+              </SubMenu>
+
+            {/* Guys dont forget to update the keys!*/}
+              <Menu.Item key="3">
+              <DollarCircleOutlined/>
+              <span>Store</span>
+              <Link to="/store" />
+            </Menu.Item>
+            
+            <Menu.Item key="4">
+            <TrophyOutlined />
+            <span>Achievements</span>
+            <Link to="/achievements" />
+            </Menu.Item>
+
+            <Menu.Item key="5">
+            <TeamOutlined />
+            <span>Friends</span>
+            <Link to="/friends" />
+            </Menu.Item>
             </Menu>
 
           </Sider>
           <Route exact path="/" component={StyledContainer} />
-          {/* <Route path="/profilePage" component={ProfilePage} />
+          <Route path="/profile" component={StyledProfile} />
+          <Route path="/friends" component={StyledFriends}/>
+          <Route path="/profile-stats" component={StyledProfileStats}/>
+          <Route path="/achievements" component={StyledAchievements} />
+          {/* 
           <Route path="/friends" component={Friends} />
           <Route path="/achievements" component={Achievements} /> */}
           <Route path="/store" component={StyledStore} />
