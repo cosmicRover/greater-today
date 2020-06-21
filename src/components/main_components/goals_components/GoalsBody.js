@@ -6,8 +6,7 @@ import FormControlLabel from "@material-ui/core/FormControlLabel";
 import ExpansionPanel from "@material-ui/core/ExpansionPanel";
 import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary";
 import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails";
-import Typography from "@material-ui/core/Typography";
-import expansion_button from '../../assets/group.svg'
+import expansion_button from '../../../assets/goals_assets/expansion_button.svg'
 
 const GoalsBody = ({ title, id, content }) => {
   const GoalsBodyStyle = styled.div`

@@ -50,6 +50,7 @@ class SideNav extends React.Component {
         <Menu.Item key="1" icon={<HomeOutlined />}>
           
           <Link to='/'> <span>Overview</span></Link>
+        
         </Menu.Item>
         <Menu.Item key="2" icon={<UserOutlined />}>
         <Link to='/profilePage'> <span>Profile</span></Link>

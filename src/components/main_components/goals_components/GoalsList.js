@@ -3,40 +3,41 @@ import styled from "@emotion/styled";
 import GoalsBody from "./GoalsBody.js";
 
 //listview goes here
-function GoalsDataModel(title, content) {
+function GoalsDataModel(title, content, key) {
   this.title = title;
   this.content = content;
+  this.key = key;
 }
 
 var list = [
-  new GoalsDataModel("Clean rooms with magic.", ["Buy a broom"]),
-  new GoalsDataModel("Walk my doggo.", ["Steal a doggo"]),
+  new GoalsDataModel("Clean rooms with magic.", ["Buy a broom"], 12),
+  new GoalsDataModel("Walk my doggo.", ["Steal a doggo"], 35),
   new GoalsDataModel("Finish my essay about burritos", [
     "What is a burrito?",
     " Determine why I need this",
-  ]),
-  new GoalsDataModel("Clean rooms with magic.", ["Buy a broom"]),
-  new GoalsDataModel("Walk my doggo.", ["Steal a doggo"]),
+  ], 34),
+  new GoalsDataModel("Clean rooms with magic.", ["Buy a broom"], 99),
+  new GoalsDataModel("Walk my doggo.", ["Steal a doggo"], 84),
   new GoalsDataModel("Finish my essay about burritos", [
     "What is a burrito?",
     " Determine why I need this",
-  ]),
-  new GoalsDataModel("Clean rooms with magic.", ["Buy a broom"]),
-  new GoalsDataModel("Walk my doggo.", ["Steal a doggo"]),
+  ], 99),
+  new GoalsDataModel("Clean rooms with magic.", ["Buy a broom"], 101),
+  new GoalsDataModel("Walk my doggo.", ["Steal a doggo"], 102),
   new GoalsDataModel("Finish my essay about burritos", [
     "What is a burrito?",
     " Determine why I need this",
-  ]),
-  new GoalsDataModel("Clean rooms with magic.", ["Buy a broom"]),
-  new GoalsDataModel("Walk my doggo.", ["Steal a doggo"]),
+  ], 204),
+  new GoalsDataModel("Clean rooms with magic.", ["Buy a broom"], 37),
+  new GoalsDataModel("Walk my doggo.", ["Steal a doggo"], 72),
   new GoalsDataModel("Finish my essay about burritos", [
     "What is a burrito?",
     " Determine why I need this",
-  ]),
+  ], 55),
 ];
 
 //inject row data here
-const VirtualizedList = ({ index }) => {
+const GoalsList = ({ index }) => {
   const GoalsBodyStyle = styled.div`
     padding-top: 13px;
     /* overflow-y: scroll; */
@@ -58,15 +59,25 @@ const VirtualizedList = ({ index }) => {
   return (
     //need to pass id as index
     <GoalsBodyStyle>
-      {list.map((item) => {
-        return (
-          <RowStyle>
-            <GoalsBody title={item.title} id={1} content={item.content} />
-          </RowStyle>
-        );
-      })}
+      {
+        list.map((item, i) => {
+          return (
+            <RowStyle key={i}>
+              <GoalsBody title={item.title} id={i} content={item.content} />
+            </RowStyle>
+          );
+        })
+      }
     </GoalsBodyStyle>
   );
 };
 
-export default VirtualizedList;
+export default GoalsList;
+
+// list.map((item, i) => {
+//   return (
+//     <RowStyle>
+//       <GoalsBody title={item.title} id={i} content={item.content} />
+//     </RowStyle>
+//   );
+// })

@@ -1,7 +1,12 @@
 import React from "react";
 import styled from "@emotion/styled";
-import left_rab from "../../assets/left_rab.svg";
-import right_rab from "../../assets/right_rab.svg";
+import left_rab from "../../../assets/goals_assets/left_rab.svg";
+import plus_button from '../../../assets/goals_assets/plus_button.svg'
+
+/*annoynomous action test */
+const foo = () =>{
+  console.log("Hello")
+}
 
 const GoalsTitle = ({ title }) => {
   const GoalsTitleStyle = styled.div`
@@ -23,13 +28,19 @@ const GoalsTitle = ({ title }) => {
 
   const titleStyle = {
     margin: "7px",
+    overflow: "hidden",
+  };
+
+  const addButtonStyle = {
+    marginTop: "8px",
+    marginRight: "16px",
   };
 
   return (
     <GoalsTitleStyle>
-      <span>{<img src={left_rab}></img>}</span>
+      <span>{<img src={left_rab} alt="Short term goals"></img>}</span>
       <span style={titleStyle}>{title}</span>
-      <span>{<img src={right_rab}></img>}</span>
+      <span style={addButtonStyle} onClick={() => foo()}>{<img src={plus_button} alt="Add a goal"></img>}</span>
     </GoalsTitleStyle>
   );
 };
