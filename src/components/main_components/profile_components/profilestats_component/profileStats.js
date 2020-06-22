@@ -2,8 +2,9 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { Layout, Menu,  } from "antd";
 import "antd/dist/antd.css";
-import SideNav from "../../antd_side_panel_component/sidebar";
+import { Container } from "@material-ui/core";
 
+import MainList from '../profilestats_component/MainList'
 // This is a test Page - Profile Page will go here!
 const { Header, Content, Footer, Sider } = Layout;
 const { SubMenu } = Menu;
@@ -27,7 +28,8 @@ class ProfileStats extends Component {
 
       <Layout style={{ minHeight: "100vh" }}>
 
-            <div><h1>sub profile</h1> </div>
+           
+            <MainList/>
      
     </Layout>
 

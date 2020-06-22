@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { Layout, Menu,  } from "antd";
 import "antd/dist/antd.css";
-import SideNav from "../../antd_side_panel_component/sidebar";
+
 
 // This is a test Page - Profile Page will go here!
 const { Header, Content, Footer, Sider } = Layout;

@@ -1,0 +1,78 @@
+.list-sort-demo-wrapper {
+    position: relative;
+    background: #e6e6e6;
+    background-image: url("./listBackground.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    overflow: hidden;
+    height: 100%;
+    
+  }
+  
+  .list-sort-demo {
+    margin: 40px auto;
+    max-width: 950px;
+    width: 100%;
+    cursor: url('http://gtms02.alicdn.com/tps/i2/T1_PMSFLBaXXcu5FDa-20-20.png') 10 10,pointer!important;
+    position: relative;
+    height: 305px;
+    width:70%;
+  }
+  /* The overflow property specifies whether to clip the content or to add 
+  scrollbars when the content of an element is too big to fit in the specified area. ... 
+  scroll - The overflow is clipped, and a scrollbar is added to see the rest of the content. */
+  .list-sort-demo > div{
+    overflow: hidden;
+  }
+  
+  .list-sort-demo-list {
+    background: #fff;
+    border-radius: 6px;
+    margin: 6px auto;
+    padding: 10px;
+    height: 100px;
+    transition:  box-shadow .5s, transform .5s;
+  }
+  
+  .list-sort-demo-list.list-drag-selected{
+    box-shadow: 0 8px 20px #E6E6E6;
+    transform: scale(1.1) !important;
+  }
+  
+  .list-sort-demo-icon {
+    width: 20%;
+    display: inline-block;
+    text-align: center;
+    font-size: 24px;
+    line-height: 50px;
+    vertical-align: top;
+  }
+  .list-sort-demo-text{
+    width: 80%;
+    display: inline-block;
+  }
+  
+  .list-sort-demo-text h1 {
+    font-size: 18px;
+    font-family: ocr-a-std,monospace;
+    font-weight: 800;
+    font-style: normal;
+    color: #5B7BF8;
+  }
+  
+  .list-sort-demo-text p{
+    font-size: 12px;
+    color: #5B7BF8;
+    font-family: ocr-a-std,monospace;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @media screen and (max-width: 320px) {
+    .list-sort-demo-text h1 {
+      font-size: 14px;
+      line-height: 28px;
+    }
+  }

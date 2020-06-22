@@ -15,7 +15,7 @@ import {
 
 import GoalsContainer from '../main_components/goals_components/GoalsContainer'
 import Profile from '../main_components/profile_components/profilePage'
-import ProfileStats from '../main_components/profile_components/profileStats'
+ import ProfileStats from '../main_components/profile_components/profilestats_component/profileStats'
 import Store from '../main_components/store_components/Store'
 import Friends from '../main_components/friends_components/friends'
 import Achievements from '../main_components/achievements_components/achievements'
@@ -62,7 +62,7 @@ const StyledFriends= (route) => {
 
 const StyledProfileStats= (route) => {
   return (
-    <ContentStyle><ProfileStats /></ContentStyle>
+    <ProfileStats />
   );
 }
 
@@ -102,26 +102,26 @@ class RouterApp extends Component {
                 <span>Profile</span>
                 <Link to="/profile" />
               </Menu.Item>
-              <Menu.Item key="2">
+              <Menu.Item key="3">
               <span>Your Goals</span>
               <Link to="/profile-stats" />
             </Menu.Item>
               </SubMenu>
 
             {/* Guys dont forget to update the keys!*/}
-              <Menu.Item key="3">
+              <Menu.Item key="4">
               <DollarCircleOutlined/>
               <span>Store</span>
               <Link to="/store" />
             </Menu.Item>
             
-            <Menu.Item key="4">
+            <Menu.Item key="5">
             <TrophyOutlined />
             <span>Achievements</span>
             <Link to="/achievements" />
             </Menu.Item>
 
-            <Menu.Item key="5">
+            <Menu.Item key="6">
             <TeamOutlined />
             <span>Friends</span>
             <Link to="/friends" />
@@ -135,6 +135,7 @@ class RouterApp extends Component {
           <Route path="/profile-stats" component={StyledProfileStats}/>
           <Route path="/achievements" component={StyledAchievements} />
           {/* 
+             <Route path="/profile-stats" component={StyledProfileStats}/>
           <Route path="/friends" component={Friends} />
           <Route path="/achievements" component={Achievements} /> */}
           <Route path="/store" component={StyledStore} />
