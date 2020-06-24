@@ -1,43 +1,11 @@
 import React from "react";
 import styled from "@emotion/styled";
 import GoalsBody from "./GoalsBody.js";
-
-//listview goes here
-function GoalsDataModel(title, content, key) {
-  this.title = title;
-  this.content = content;
-  this.key = key;
-}
-
-var list = [
-  new GoalsDataModel("Clean rooms with magic.", ["Buy a broom"], 12),
-  new GoalsDataModel("Walk my doggo.", ["Steal a doggo"], 35),
-  new GoalsDataModel("Finish my essay about burritos", [
-    "What is a burrito?",
-    " Determine why I need this",
-  ], 34),
-  new GoalsDataModel("Clean rooms with magic.", ["Buy a broom"], 99),
-  new GoalsDataModel("Walk my doggo.", ["Steal a doggo"], 84),
-  new GoalsDataModel("Finish my essay about burritos", [
-    "What is a burrito?",
-    " Determine why I need this",
-  ], 99),
-  new GoalsDataModel("Clean rooms with magic.", ["Buy a broom"], 101),
-  new GoalsDataModel("Walk my doggo.", ["Steal a doggo"], 102),
-  new GoalsDataModel("Finish my essay about burritos", [
-    "What is a burrito?",
-    " Determine why I need this",
-  ], 204),
-  new GoalsDataModel("Clean rooms with magic.", ["Buy a broom"], 37),
-  new GoalsDataModel("Walk my doggo.", ["Steal a doggo"], 72),
-  new GoalsDataModel("Finish my essay about burritos", [
-    "What is a burrito?",
-    " Determine why I need this",
-  ], 55),
-];
+import { connect } from "react-redux"
+import { addGoal } from "../../../redux"
 
 //inject row data here
-const GoalsList = ({ index }) => {
+const GoalsList = (props) => {
   const GoalsBodyStyle = styled.div`
     padding-top: 13px;
     /* overflow-y: scroll; */
@@ -60,10 +28,10 @@ const GoalsList = ({ index }) => {
     //need to pass id as index
     <GoalsBodyStyle>
       {
-        list.map((item, i) => {
+        props.goals.map((item, index) => {
           return (
-            <RowStyle key={i}>
-              <GoalsBody title={item.title} id={i} content={item.content} />
+            <RowStyle key={index}>
+              <GoalsBody title={item.goal} id={index} content={item.steps} />
             </RowStyle>
           );
         })
@@ -72,12 +40,17 @@ const GoalsList = ({ index }) => {
   );
 };
 
-export default GoalsList;
+/* redux mapping state to props and dispatching of actions */
+const mapStateToProps = (state) => {
+  return {
+    goals: state.goals
+  }
+}
 
-// list.map((item, i) => {
-//   return (
-//     <RowStyle>
-//       <GoalsBody title={item.title} id={i} content={item.content} />
-//     </RowStyle>
-//   );
-// })
+const mapDispatchToProps = (dispatch) => {
+  return {
+    addGoal: () => dispatch(addGoal())
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(GoalsList)

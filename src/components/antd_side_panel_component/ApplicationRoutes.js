@@ -39,28 +39,28 @@ const StyledContainer = (route) => {
   );
 }
 
-const StyledProfile= (route) => {
+const StyledProfile = (route) => {
   return (
     <ContentStyle><Profile /></ContentStyle>
   );
 }
-const StyledStore= (route) => {
+const StyledStore = (route) => {
   return (
     <ContentStyle><Store /></ContentStyle>
   );
 }
-const StyledAchievements= (route) => {
+const StyledAchievements = (route) => {
   return (
     <ContentStyle><Achievements /></ContentStyle>
   );
 }
-const StyledFriends= (route) => {
+const StyledFriends = (route) => {
   return (
     <ContentStyle><Friends /></ContentStyle>
   );
 }
 
-const StyledProfileStats= (route) => {
+const StyledProfileStats = (route) => {
   return (
     <ContentStyle><ProfileStats /></ContentStyle>
   );
@@ -89,7 +89,8 @@ class RouterApp extends Component {
             collapsed={this.state.collapsed}
             onCollapse={this.onCollapse}
           >
-          <div className="logo" />
+            {/* Guys dont forget to update the keys!*/}
+            <div className="logo" />
             <Menu theme="dark" defaultSelectedKeys={["1"]} mode="inline">
               <Menu.Item key="1">
                 <HomeOutlined />
@@ -98,45 +99,42 @@ class RouterApp extends Component {
 
               </Menu.Item>
               <SubMenu key="sub1" icon={< UserOutlined />} title="Profile">
-              <Menu.Item key="2">
-                <span>Profile</span>
-                <Link to="/profile" />
-              </Menu.Item>
-              <Menu.Item key="2">
-              <span>Your Goals</span>
-              <Link to="/profile-stats" />
-            </Menu.Item>
+                <Menu.Item key="2">
+                  <span>Profile</span>
+                  <Link to="/profile" />
+                </Menu.Item>
+
+                <Menu.Item key="3">
+                  <span>Your Goals</span>
+                  <Link to="/profile-stats" />
+                </Menu.Item>
               </SubMenu>
 
-            {/* Guys dont forget to update the keys!*/}
-              <Menu.Item key="3">
-              <DollarCircleOutlined/>
-              <span>Store</span>
-              <Link to="/store" />
-            </Menu.Item>
-            
-            <Menu.Item key="4">
-            <TrophyOutlined />
-            <span>Achievements</span>
-            <Link to="/achievements" />
-            </Menu.Item>
+              <Menu.Item key="4">
+                <DollarCircleOutlined />
+                <span>Store</span>
+                <Link to="/store" />
+              </Menu.Item>
 
-            <Menu.Item key="5">
-            <TeamOutlined />
-            <span>Friends</span>
-            <Link to="/friends" />
-            </Menu.Item>
+              <Menu.Item key="5">
+                <TrophyOutlined />
+                <span>Achievements</span>
+                <Link to="/achievements" />
+              </Menu.Item>
+
+              <Menu.Item key="6">
+                <TeamOutlined />
+                <span>Friends</span>
+                <Link to="/friends" />
+              </Menu.Item>
             </Menu>
 
           </Sider>
           <Route exact path="/" component={StyledContainer} />
           <Route path="/profile" component={StyledProfile} />
-          <Route path="/friends" component={StyledFriends}/>
-          <Route path="/profile-stats" component={StyledProfileStats}/>
+          <Route path="/friends" component={StyledFriends} />
+          <Route path="/profile-stats" component={StyledProfileStats} />
           <Route path="/achievements" component={StyledAchievements} />
-          {/* 
-          <Route path="/friends" component={Friends} />
-          <Route path="/achievements" component={Achievements} /> */}
           <Route path="/store" component={StyledStore} />
         </Layout>
       </Router>
