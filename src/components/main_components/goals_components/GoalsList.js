@@ -47,10 +47,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    addGoal: () => dispatch(addGoal())
-  }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(GoalsList)
+export default connect(mapStateToProps, null)(GoalsList)

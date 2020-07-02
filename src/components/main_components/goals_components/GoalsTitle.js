@@ -2,13 +2,15 @@ import React from "react";
 import styled from "@emotion/styled";
 import left_rab from "../../../assets/goals_assets/left_rab.svg";
 import plus_button from '../../../assets/goals_assets/plus_button.svg'
+import { connect } from "react-redux"
+import { addGoal } from "../../../redux"
 
 /*annoynomous action test */
 const foo = () =>{
   console.log("Hello")
 }
 
-const GoalsTitle = ({ title }) => {
+const GoalsTitle = (props, { title }) => {
   const GoalsTitleStyle = styled.div`
     top: auto;
     left: auto;
@@ -40,9 +42,15 @@ const GoalsTitle = ({ title }) => {
     <GoalsTitleStyle>
       <span>{<img src={left_rab} alt="Short term goals"></img>}</span>
       <span style={titleStyle}>{title}</span>
-      <span style={addButtonStyle} onClick={() => foo()}>{<img src={plus_button} alt="Add a goal"></img>}</span>
+      <span style={addButtonStyle} onClick={props.addGoal}>{<img src={plus_button} alt="Add a goal"></img>}</span>
     </GoalsTitleStyle>
   );
 };
 
-export default GoalsTitle;
+const mapDispatchToProps = (dispatch) => {
+  return {
+    addGoal: () => dispatch(addGoal())
+  }
+}
+
+export default connect(null, mapDispatchToProps)(GoalsTitle)
