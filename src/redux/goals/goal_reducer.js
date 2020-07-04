@@ -5,12 +5,13 @@ import GoalsDataModel from "../data_models/goal_data_models"
 /* define the init state for the app. NOTE: this will be retreived from the firestore */
 const initState = {
 
-    goals: [new GoalsDataModel("haha", "nanan"),
-    new GoalsDataModel("haha", "nanan"),
-    new GoalsDataModel("haha", "nanan"),
-    new GoalsDataModel("haha", "nanan"),
-    new GoalsDataModel("haha", "nanan"),
-    new GoalsDataModel("haha", "nanan")]
+    goals: [
+        new GoalsDataModel("haha", "nanan"),
+        new GoalsDataModel("haha", "nanan"),
+        new GoalsDataModel("haha", "nanan"),
+        new GoalsDataModel("haha", "nanan"),
+        new GoalsDataModel("haha", "nanan"),
+        new GoalsDataModel("haha", "nanan")]
 
 }
 
