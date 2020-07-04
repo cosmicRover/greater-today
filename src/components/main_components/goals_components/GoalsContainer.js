@@ -1,36 +1,25 @@
 import React from "react";
 import styled from "@emotion/styled";
 import GoalsTitle from "./GoalsTitle.js";
-import VirtualizedList from "./ScrollDemo.js";
-import Paper from '@material-ui/core/Paper';
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
-import SwipeableViews from 'react-swipeable-views';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import { yellow } from "@material-ui/core/colors";
-import { colors } from "@material-ui/core";
+import GoalsList from "./GoalsList.js";
 
 
-const GoalsOnlyContainer = styled.div`
-  max-height:25rem;
-  overflow: scroll;
-`;
+// const GoalsOnlyContainer = styled.div`
+//   max-height:25rem;
+//   overflow: scroll;
+// `;
 
 //return list based on the bool value
 const displayList = ({ isShortTerm }) => {
   return isShortTerm ? (
     <>
       <GoalsTitle title="Short Term Goals" />
-      <GoalsOnlyContainer>
-      <VirtualizedList />
-      </GoalsOnlyContainer>
+      <GoalsList />
     </>
   ) : (
       <>
         <GoalsTitle title="Long Term Goals" />
-        <GoalsOnlyContainer>
-        <VirtualizedList />
-        </GoalsOnlyContainer>
+        <GoalsList />
       </>
     );
 };
@@ -96,7 +85,7 @@ const GoalsContainer = ({ title }) => {
   //switch tabs based on active tab
   return (
     <>
-      <OverviewTextStyle><text>Goals Overview</text></OverviewTextStyle>
+      {/* <OverviewTextStyle><text>Goals Overview</text></OverviewTextStyle>
       <Tabs
         value={value}
         // indicatorColor="primary"
@@ -106,7 +95,7 @@ const GoalsContainer = ({ title }) => {
         <TabStyle><Tab label="Short Term" /></TabStyle>
         <span>&emsp;</span>
         <DummyTabStyle><Tab label="Long Term" /></DummyTabStyle>
-      </Tabs>
+      </Tabs> */}
 
       {<GoalsContainerStyle>{displayList(true)}</GoalsContainerStyle>}
 

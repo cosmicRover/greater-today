@@ -1,6 +1,6 @@
 import React , { Component } from 'react';
 import GoalsContainer from './GoalsContainer';
-import SideNav from '../side_panel_component/sidebar'
+import SideNav from '../../antd_side_panel_component/sidebar'
 import { BrowserRouter as Router, Route, Link, Switch, BrowserRouter } from "react-router-dom";
 import { Layout, Menu } from 'antd';
 import styled from "@emotion/styled";
@@ -33,18 +33,7 @@ class GoalsContainerPage extends Component {
   render() {
     return (
         <Layout style={{ minHeight: "100vh" }}>
-
       <SideNav/>
-        
-        <Layout >
-        <Content>  
-          <ContentStyle>
-            <GoalsContainer />
-            
-          </ContentStyle>
-        </Content>
-      </Layout>
-     
       </Layout>
       
     );

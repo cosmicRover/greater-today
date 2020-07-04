@@ -2,13 +2,13 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { Layout, Menu,  } from "antd";
 import "antd/dist/antd.css";
-import SideNav from "../side_panel_component/sidebar";
+import SideNav from "../../antd_side_panel_component/sidebar";
 
 // This is a test Page - Profile Page will go here!
 const { Header, Content, Footer, Sider } = Layout;
 const { SubMenu } = Menu;
 
-class Store extends Component {
+class Friends extends Component {
   state = {
     collapsed: false
   };
@@ -26,19 +26,12 @@ class Store extends Component {
     return (     
 
       <Layout style={{ minHeight: "100vh" }}>
- 
-    <SideNav/>
+
+            <div><h1>Friends</h1> </div>
      
-        <Layout >
-          <Content>  
-            <div><h1>Store is empty</h1> </div>
-          </Content>
-      </Layout>
-   
     </Layout>
 
     );
   }
 }
-export default Store;
-
+export default Friends;
