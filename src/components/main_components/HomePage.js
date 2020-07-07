@@ -6,8 +6,9 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Avatar from '@material-ui/core/Avatar';
-import ImageAvatars from './HomePageStyles/AvatarStyles.js'
-
+import rabbit from '../../assets/rabbit1.svg'
+import LevelBar from './HomePageComponents/levelbar.js'
+import Rewards from './HomePageComponents/rewards.js'
 
 
 const HomePage = () => {
@@ -30,14 +31,17 @@ const HomePage = () => {
       display:inline-flex;
     `;
 
-    const UserAvatar = styled.div`
+    const UserAvatar = styled.image`
       vertical-align: middle;
       horizontal-align:middle;
       height:200px;
+      max-height:300px;
+      max-width:300px;
       width:200px;
       border-radius:50%;
       background: grey;
     `;
+
 
     const UserInfoBox = styled.div`
       padding:10px 25px;
@@ -45,7 +49,14 @@ const HomePage = () => {
       justify-content:center;
     `;
 
+    const MiniUserInfoBox = styled.div`
+      border-bottom:4px solid #BFDFF7;
+      margin-bottom:10px;
+    `;
+
     const UserRewards = styled.div`
+      max-height:300px;
+      max-width: 500px;
     `;
 
     const WeeklyActivity = styled.div`
@@ -65,17 +76,22 @@ const HomePage = () => {
             <Container maxWidth="55%">
               <Typography component="div" style={{ backgroundColor: 'white', height: '100vh',borderRadius:'25px'}}>
                   <UserInfoContainer>
+
                     <UserAvatar>
-                      <img src="./../../assets/dumyhomepageicon.jpg" />
+                      <img src={rabbit} alt="Short term goals" max-height={200} max-width={200}/>
                     </UserAvatar>
+
                     <UserInfoBox>
-                      <h2>SAMPLE USERNAME</h2>
-                      <h4>sample@email.com</h4>
-                      <p> ----------------</p>
+                      <MiniUserInfoBox>
+                        <h2>SAMPLE USERNAME</h2>
+                        <h4>sample@email.com</h4>
+                      </MiniUserInfoBox>
                       <p>Friend Code: 123456789</p>
-                      <p> LEVEL BAR </p>
+                      <LevelBar />
                     </UserInfoBox>
+
                     <UserRewards>
+                      <Rewards />
                     </UserRewards>
                   </UserInfoContainer>
               </Typography>
