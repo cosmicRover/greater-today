@@ -9,6 +9,7 @@ import Avatar from '@material-ui/core/Avatar';
 import rabbit from '../../assets/rabbit1.svg'
 import LevelBar from './HomePageComponents/levelbar.js'
 import Rewards from './HomePageComponents/rewards.js'
+import WeeklyChart from './HomePageComponents/graph.js'
 
 
 const HomePage = () => {
@@ -28,15 +29,21 @@ const HomePage = () => {
 
     const UserInfoContainer = styled.div`
       padding:25px;
-      display:inline-flex;
+      position:absolute;
+      max-height:100%;
+      max-width:100%;
+      border-radius:50px;
+      background:white;
     `;
 
-    const UserAvatar = styled.image`
-      vertical-align: middle;
-      horizontal-align:middle;
-      height:200px;
+    const UpperHalfContainer = styled.div`
+      display:flex;
+    `;
+
+    const UserAvatar = styled.div`
       max-height:300px;
       max-width:300px;
+      height:200px;
       width:200px;
       border-radius:50%;
       background: grey;
@@ -59,6 +66,10 @@ const HomePage = () => {
       max-width: 500px;
     `;
 
+    const LowerHalfContainer = styled.div`
+      display:flex;
+    `;
+
     const WeeklyActivity = styled.div`
     `;
 
@@ -71,32 +82,42 @@ const HomePage = () => {
 
     <HomePageStyle>
       <HomeGreeting>Hello, Iza! </HomeGreeting>
-          <React.Fragment>
-            <CssBaseline />
-            <Container maxWidth="55%">
-              <Typography component="div" style={{ backgroundColor: 'white', height: '100vh',borderRadius:'25px'}}>
+          // <React.Fragment>
+            // <CssBaseline />
+            // <Container maxWidth="55%">
+            //   <Typography component="div" style={{ backgroundColor: 'white', height: '100vh',borderRadius:'25px', maxHeight:'100%', maxWidth:'100%'}}>
                   <UserInfoContainer>
+                    <UpperHalfContainer>
 
-                    <UserAvatar>
-                      <img src={rabbit} alt="Short term goals" max-height={200} max-width={200}/>
-                    </UserAvatar>
+                      <UserAvatar>
+                        <img src={rabbit} alt="Short term goals" max-height={200} max-width={200}/>
+                      </UserAvatar>
 
-                    <UserInfoBox>
-                      <MiniUserInfoBox>
-                        <h2>SAMPLE USERNAME</h2>
-                        <h4>sample@email.com</h4>
-                      </MiniUserInfoBox>
-                      <p>Friend Code: 123456789</p>
-                      <LevelBar />
-                    </UserInfoBox>
+                      <UserInfoBox>
+                        <MiniUserInfoBox>
+                          <h2>SAMPLE USERNAME</h2>
+                          <h4>sample@email.com</h4>
+                        </MiniUserInfoBox>
+                        <p>Friend Code: 123456789</p>
+                        <LevelBar />
+                      </UserInfoBox>
 
-                    <UserRewards>
-                      <Rewards />
-                    </UserRewards>
+                      <UserRewards>
+                        <Rewards />
+                      </UserRewards>
+
+                    </UpperHalfContainer>
+                    <LowerHalfContainer>
+
+                      <WeeklyActivity>
+                        <WeeklyChart />
+                      </WeeklyActivity>
+
+                    </LowerHalfContainer>
                   </UserInfoContainer>
-              </Typography>
-            </Container>
-          </React.Fragment>
+          //     </Typography>
+          //   </Container>
+          // </React.Fragment>
     </HomePageStyle>
     );
 }

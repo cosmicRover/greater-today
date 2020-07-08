@@ -23,6 +23,7 @@ const LevelBarStyle = styled.div`
   height: 20px;
   width: 350px;
   border-radius:50px;
+  color:white;
   box-shadow: 0px 3px 5px #6D597A;
 `;
 
@@ -43,7 +44,7 @@ const LevelBar = (props) => {
 
 const Filler = (props) => {
   return (
-  <LevelBarFillerStyle>
+  <LevelBarFillerStyle style={{ width: props.percentage }}>
     <div className="filler" style={{ width: props.percentage }}/>
   </LevelBarFillerStyle>
   )
