@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="304.428" height="1080" viewBox="0 0 304.428 1080">
+  <defs>
+    <filter id="Path_515" x="0" y="404" width="222.762" height="94" filterUnits="userSpaceOnUse">
+      <feOffset dy="5" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Path_169" x="255.295" y="476.591" width="27.035" height="45.081" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-2"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Path_170" x="243.772" y="476.79" width="27.035" height="45.081" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-3"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_279" data-name="Group 279" transform="translate(-1618.238)">
+    <g id="expander" transform="translate(1889.779 483.96) rotate(89)">
+      <path id="Path_528" data-name="Path 528" d="M0,0H53.334l1.332,1080H0S-12,816-12,546,0,0,0,0Z" transform="matrix(0.017, -1, 1, 0.017, -484.266, 13.33)" fill="#deecff"/>
+    </g>
+    <g id="Group_278" data-name="Group 278">
+      <g id="helper" transform="translate(205 -524)">
+        <g transform="matrix(1, 0, 0, 1, 1413.24, 524)" filter="url(#Path_515)">
+          <path id="Path_515-2" data-name="Path 515" d="M12.8,0H183.966c7.068,0,12.8,7.163,12.8,16l-2,43c0,4.021,10,17,10,17s-16.944-4-20.8-4H12.8C5.73,72,0,64.837,0,56V16C0,7.163,5.73,0,12.8,0Z" transform="translate(9 408)" fill="#7b9ffe"/>
+        </g>
+        <text id="Click_here_to_track_your_progress_" data-name="Click here to track 
+your progress!" transform="translate(1434 950)" fill="#fff" font-size="15" font-family="OCRAExtended, OCR A"><tspan x="0" y="13">Click here to track </tspan><tspan x="0" y="37">your progress!</tspan></text>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, 1618.24, 0)" filter="url(#Path_169)">
+        <path id="Path_169-2" data-name="Path 169" d="M24.25,0,11.787,6.1,0,.005" transform="translate(271.54 483.96) rotate(89)" fill="none" stroke="#5c7cf8" stroke-linecap="round" stroke-width="2"/>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, 1618.24, 0)" filter="url(#Path_170)">
+        <path id="Path_170-2" data-name="Path 170" d="M24.25,0,11.787,6.1,0,.005" transform="translate(260.02 484.16) rotate(89)" fill="none" stroke="#5c7cf8" stroke-linecap="round" stroke-width="2"/>
+      </g>
+    </g>
+  </g>
+</svg>

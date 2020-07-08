@@ -62,7 +62,7 @@ const StyledFriends = (route) => {
 
 const StyledProfileStats = (route) => {
   return (
-    <ContentStyle><ProfileStats /></ContentStyle>
+    <ProfileStats />
   );
 }
 

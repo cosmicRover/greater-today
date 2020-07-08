@@ -1,0 +1,105 @@
+@import '~antd/dist/antd.css';
+
+
+
+.ant-btn.ant-btn-primary{
+    background: #FF9066;
+    border: none;
+}
+
+.header-text{
+color: #5B7BF8;
+opacity: 51%;
+font-size: 22px;
+font-weight: bold;   
+padding-bottom: 2%;
+padding-top: 7%;
+font-family: ocr-a-std,monospace;
+font-weight: 400;
+font-style: normal;
+}
+
+.main-header-text{
+    color: #5B7BF8;
+    opacity: 51%;
+    font-size: 22px;
+    font-weight: bold;   
+    padding-bottom: 5%;
+    font-family: ocr-a-std,monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.ant-statistic-title{
+    color: #5B7BF8;
+    opacity: 51%;
+    font-size: 22px;
+    font-weight: bold; 
+    font-family: ocr-a-std,monospace;
+    font-weight: 400;
+    font-style: normal; 
+}
+
+.ant-card{
+    border-radius: 5px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, .1), 0 2px 4px -1px rgba(0, 0, 0, .06);
+}
+
+.site-statistic-demo-card{ 
+    background: white;
+    padding: 1px;
+}
+
+
+/* streak */
+#Group_270{
+    height: 45px;
+    width: 45px;
+    padding-top: 10px;
+ }
+
+ #Group_237{
+    height: 35px;
+    width: 25px;
+    margin-top: 10px;
+ }
+
+ #rabbit-design{
+    height: 75px;
+    width: 25px;
+ }
+
+ /***** Clock Timeline of DueDates *****/
+ .ant-timeline-item-head-blue{
+     color: #5B7BF8;
+ }
+
+ /***** CHART of DAILY ACTIVITY in the drawer JS  758****/
+
+
+/****** RESPONSIVE MEDIA QUERRIES ******/
+/* Portrait */
+@media only screen 
+  and (min-device-width: 0px) 
+  and (max-device-width: 700px) {
+
+
+    .ant-statistic-title{
+        color:#5B7BF8;
+        /* opacity: 51%; */
+        font-size: 9px;
+        font-weight: bold;  
+        text-align: center;
+    }
+
+    .p{
+        text-align: center;
+    }
+
+    .ant-statistic-content-value-int{
+        font-size: 20px;
+    }
+    
+
+}
+

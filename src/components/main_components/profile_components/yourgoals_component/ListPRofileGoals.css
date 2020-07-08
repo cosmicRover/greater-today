@@ -1,0 +1,85 @@
+.list-sort-demo-wrapper {
+    /* position: relative; */
+    align-items: center;
+    position: center;
+    /* background: #e6e6e6; */
+    /* background: url("../yourgoals_component/images/background.png");  */
+    overflow: hidden;
+    height: 385px;
+  }
+  .ant-layout{
+    background: url("../yourgoals_component/images/background.png"); 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  
+  .list-sort-demo {
+    align-items: center;
+    margin: 40px auto;
+    max-width: 550px;
+    
+    cursor: url('http://gtms02.alicdn.com/tps/i2/T1_PMSFLBaXXcu5FDa-20-20.png') 10 10,pointer!important;
+    position: relative;
+    height: 800px;
+  }
+  .list-sort-demo > div{
+    overflow: hidden;
+  }
+
+  .list-sort-demo-wrapper{
+    align-items: center;
+    height:800px ;
+    /* width: 800px; */
+  }
+  
+  .list-sort-demo-list {
+    align-items: center;
+    background: #fff;
+    border-radius: 6px;
+    margin: 8px auto;
+    padding: 10px;
+    height: 100px;
+    width: 100%;
+    transition:  box-shadow .5s, transform .5s;
+  }
+  
+  .list-sort-demo-list.list-drag-selected{
+    box-shadow: 0 8px 20px #E6E6E6;
+    transform: scale(1.1) !important;
+  }
+  
+  .list-sort-demo-icon {
+    width: 20%;
+    display: inline-block;
+    text-align: center;
+    font-size: 24px;
+    font-family: ocr-a-std, monospace;
+    color: #5B7BF8;
+    line-height: 50px;
+    vertical-align: top;
+  }
+  .list-sort-demo-text{
+    width: 80%;
+    display: inline-block;
+  }
+  
+  .list-sort-demo-text h1 {
+    font-family: ocr-a-std, monospace;
+    font-weight: bold;
+    color: #5B7BF8;
+    font-size: 18px;
+  }
+  
+  .list-sort-demo-text p{
+    color: #5B7BF8;
+    font-size: 12px;
+  }
+
+  @media screen and (max-width: 320px) {
+    .list-sort-demo-text h1 {
+      font-size: 14px;
+      line-height: 28px;
+      font-family: ocr-a-std,monospace;
+    }
+  }
