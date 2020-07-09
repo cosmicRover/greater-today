@@ -1,6 +1,16 @@
-.h1{
+.title{
     font-family: ocr-a-std, monospace;
-    font-weight: bold;
+    font-weight: medium;
     color: #5B7BF8;
-    font-size: 12px;
+    font-size: 30px;
   }
+
+.ant-progress-outer {
+    width: 80%
+}
+
+.rabbit-goal{
+    margin-top: 25%;
+    width: 70%;
+    height: 50%;
+}

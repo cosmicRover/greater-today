@@ -19,7 +19,7 @@ class ProfileStats extends Component {
 
       <Layout>
         <Content style={{ margin: '24px 16px 0' }}>
-          <h1 style={{ color: '#5B7BF8'}}>How do You Use Your Time?</h1>
+          <h1 className="title" style={{ color: '#5B7BF8'}}>How do You Use Your Time?</h1>
           <div style={{ padding: 24, minHeight: 600 }}>
                 <ListSortDemo/>  
           </div>

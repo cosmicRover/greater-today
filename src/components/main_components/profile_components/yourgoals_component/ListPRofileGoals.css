@@ -39,7 +39,7 @@
     border-radius: 6px;
     margin: 8px auto;
     padding: 10px;
-    height: 100px;
+    height: 140px;
     width: 100%;
     transition:  box-shadow .5s, transform .5s;
   }

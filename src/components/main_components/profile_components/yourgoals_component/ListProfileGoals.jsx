@@ -3,8 +3,10 @@ import Icon from 'antd/lib/icon';
 import PropTypes from 'prop-types';
 import ListSort from '../yourgoals_component/ListSort';
 import './ListPRofileGoals.css';
-import {Progress} from 'antd'
-
+import moment from 'moment';
+import {Progress, TimePicker ,Row, Col} from 'antd'
+import Rabbit from '../yourgoals_component/images/rabbit.png'
+const { RangePicker } = TimePicker;
 const dataArray = [
   {
     icon: 'question-circle-o',
@@ -51,16 +53,31 @@ export default class ListSortDemo extends React.Component {
             <Icon type={icon} style={{ color }} />
           </div>
           <div className={`${this.props.className}-text`}>
+
+
+          <Row>
+          <Col flex="1 1 120px">
             <h1>{title}</h1>
             <p>{text}</p>
-            <Progress
+            <Progress 
+              strokeHeight={5}
                 strokeColor={{
                   '0%': '#108ee9',
                   '100%': '#87d068',
                 }}
-                percent={99.9}
-              />
-          </div>
+                percent={35.9}
+              />  
+              <RangePicker 
+                defaultValue={moment('HH:mm')}
+                bordered={false}
+                disabled
+              /> 
+          </Col>
+          <Col flex="0 1 100px">  
+            <img className="rabbit-goal"src={Rabbit} alt="Logo" />
+          </Col>
+        </Row>
+        </div>
         </div>
       );
     });
