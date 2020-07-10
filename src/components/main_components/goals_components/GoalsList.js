@@ -3,6 +3,7 @@ import styled from "@emotion/styled";
 import GoalsBody from "./GoalsBody.js";
 import { connect } from "react-redux"
 import { addGoal } from "../../../redux"
+import PopupExampleTrigger from "./GoalComposer"
 
 //inject row data here
 const GoalsList = (props) => {
@@ -27,7 +28,7 @@ const GoalsList = (props) => {
   return (
     //need to pass id as index
     <GoalsBodyStyle>
-      {
+      {/* {
         props.goals.map((item, index) => {
           return (
             <RowStyle key={index}>
@@ -35,7 +36,8 @@ const GoalsList = (props) => {
             </RowStyle>
           );
         })
-      }
+      } */}
+      <PopupExampleTrigger/>
     </GoalsBodyStyle>
   );
 };
