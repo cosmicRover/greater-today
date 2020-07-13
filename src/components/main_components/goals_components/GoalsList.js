@@ -27,7 +27,7 @@ const GoalsList = (props) => {
 
   return (
     //need to pass id as index
-    <GoalsBodyStyle>
+    <>
       {/* {
         props.goals.map((item, index) => {
           return (
@@ -38,7 +38,7 @@ const GoalsList = (props) => {
         })
       } */}
       <PopupExampleTrigger/>
-    </GoalsBodyStyle>
+    </>
   );
 };
 

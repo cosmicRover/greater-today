@@ -41,18 +41,3 @@ class GoalsContainerPage extends Component {
 }
 
 export default GoalsContainerPage;
-// <Link to='/'/>
-
-// <Link to='/'>
-// <Layout style={{ minHeight: "100vh" }}>
-// <Layout >
-// <Content>  
-//   <ContentStyle>
-//     <GoalsContainer />
-    
-//   </ContentStyle>
-// </Content>
-// </Layout>
-
-// </Layout>
-// </Link>

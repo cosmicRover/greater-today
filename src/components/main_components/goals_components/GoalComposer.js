@@ -1,22 +1,20 @@
 import React from 'react'
 import styled from "@emotion/styled"
 
-const PopupExampleTrigger = () => {
 
-    const containerStyle = styled.div`
-        height: 500px;
-        width: 500px;
-        background: #FFFFFF 0% 0% no-repeat padding-box;
-        box-shadow: 0px 3px 10px #00000029;
-        border-radius: 14px;
-        opacity: 1;
-    `;
+export class GoalComposer extends React.Component {
+    //pass in the customizeable consturctors
+    constructor({ title = "Seat a Goal" }) {
+        super(title);
+    }
 
-    return (
-        <containerStyle>
-            <text>Hello</text>
-        </containerStyle>
-    );
+
+    render() {
+        return (
+            <text></text>
+        )
+    }
 }
 
-export default PopupExampleTrigger
+export default GoalComposer
+
