@@ -4,7 +4,7 @@ import left_rab from "../../../assets/goals_assets/left_rab.svg";
 import plus_button from '../../../assets/goals_assets/plus_button.svg'
 import { connect } from "react-redux"
 import { addGoal } from "../../../redux"
-import PopupExampleTrigger from "./GoalComposer"
+import ResponsiveDialog from "./GoalComposer"
 
 /*annoynomous action test */
 const foo = () =>{
@@ -43,7 +43,7 @@ const GoalsTitle = (props, { title }) => {
     <GoalsTitleStyle>
       <span>{<img src={left_rab} alt="Short term goals"></img>}</span>
       <span style={titleStyle}>{title}</span>
-      <span style={addButtonStyle} onClick={PopupExampleTrigger}>{<img src={plus_button} alt="Add a goal"></img>}</span>
+      <span style={addButtonStyle} onClick={""}>{<img src={plus_button} alt="Add a goal"></img>}</span>
     </GoalsTitleStyle>
   );
 };
