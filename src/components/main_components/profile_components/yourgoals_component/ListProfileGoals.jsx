@@ -4,8 +4,9 @@ import PropTypes from 'prop-types';
 import ListSort from '../yourgoals_component/ListSort';
 import './ListPRofileGoals.css';
 import moment from 'moment';
-import {Progress, TimePicker ,Row, Col} from 'antd'
+import {Progress, TimePicker ,Row, Col,Button} from 'antd'
 import Rabbit from '../yourgoals_component/images/rabbit.png'
+import { DownloadOutlined } from '@ant-design/icons';
 const { RangePicker } = TimePicker;
 const dataArray = [
   {
@@ -72,6 +73,13 @@ export default class ListSortDemo extends React.Component {
                 bordered={false}
                 disabled
               /> 
+              <Button type="primary" shape="circle" icon={<DownloadOutlined />}  />
+              <Button type="primary" shape="circle" icon={<DownloadOutlined />}  />
+              <Button type="primary" shape="circle" icon={<DownloadOutlined />}  />
+              <Button type="primary" shape="circle" icon={<DownloadOutlined />}  />
+              <Button type="primary" shape="circle" icon={<DownloadOutlined />}  />
+              <Button type="primary" shape="circle" icon={<DownloadOutlined />}  />
+              <Button type="primary" shape="circle" icon={<DownloadOutlined />}  />
           </Col>
           <Col flex="0 1 100px">  
             <img className="rabbit-goal"src={Rabbit} alt="Logo" />
