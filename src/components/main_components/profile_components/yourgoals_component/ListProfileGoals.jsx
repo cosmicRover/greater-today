@@ -4,9 +4,12 @@ import PropTypes from 'prop-types';
 import ListSort from '../yourgoals_component/ListSort';
 import './ListPRofileGoals.css';
 import moment from 'moment';
-import {Progress, TimePicker ,Row, Col,Button} from 'antd'
+import {Progress, TimePicker ,Row, Col,Button, PageHeader } from 'antd'
 import Rabbit from '../yourgoals_component/images/rabbit.png'
-import { DownloadOutlined } from '@ant-design/icons';
+import { Layout, Menu, Breadcrumb } from 'antd';
+
+const { Header} = Layout;
+
 const { RangePicker } = TimePicker;
 const dataArray = [
   {
@@ -49,13 +52,17 @@ export default class ListSortDemo extends React.Component {
         icon, color, title, text,
       } = item;
       return (
+        // <PageHeader
+        // className="site-page-header"
+        // onBack={() => null}
+        // title="Title"
+        // subTitle="This is a subtitle"
+        // />,
         <div key={i} className={`${this.props.className}-list`}>
           <div className={`${this.props.className}-icon`}>
             <Icon type={icon} style={{ color }} />
           </div>
-          <div className={`${this.props.className}-text`}>
-
-
+          <div className={`${this.props.className}-text`}>         
           <Row>
           <Col flex="1 1 120px">
             <h1>{title}</h1>
@@ -73,13 +80,13 @@ export default class ListSortDemo extends React.Component {
                 bordered={false}
                 disabled
               /> 
-              <Button type="primary" shape="circle" icon={<DownloadOutlined />}  />
-              <Button type="primary" shape="circle" icon={<DownloadOutlined />}  />
-              <Button type="primary" shape="circle" icon={<DownloadOutlined />}  />
-              <Button type="primary" shape="circle" icon={<DownloadOutlined />}  />
-              <Button type="primary" shape="circle" icon={<DownloadOutlined />}  />
-              <Button type="primary" shape="circle" icon={<DownloadOutlined />}  />
-              <Button type="primary" shape="circle" icon={<DownloadOutlined />}  />
+              <Button type="primary" shape="circle"> M</Button>
+              <Button className="long-term" type="primary" shape="circle"> T</Button>
+              <Button className="long-term" type="primary" shape="circle"> W</Button>
+              <Button className="short-term" type="primary" shape="circle"> T</Button>
+              <Button  type="primary" shape="circle"> F</Button>
+              <Button className="long-term" type="primary" shape="circle"> S</Button>
+              <Button type="primary" shape="circle"> S</Button>
           </Col>
           <Col flex="0 1 100px">  
             <img className="rabbit-goal"src={Rabbit} alt="Logo" />
@@ -90,6 +97,7 @@ export default class ListSortDemo extends React.Component {
       );
     });
     return (
+     
       <div className={`${this.props.className}-wrapper`}>
         <div className={this.props.className}>
           <ListSort
@@ -100,6 +108,7 @@ export default class ListSortDemo extends React.Component {
           </ListSort>
         </div>
       </div>
+      
     );
   }
 }
