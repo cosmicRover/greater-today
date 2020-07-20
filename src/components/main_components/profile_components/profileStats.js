@@ -1,37 +1,61 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import { Layout, Menu,  } from "antd";
+// import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { Layout,PageHeader, Avatar, Tabs,DatePicker, Row, Col } from "antd";
+
+import ListSortDemo from '../profile_components/yourgoals_component/ListProfileGoals.jsx'
+import '../profile_components/yourgoals_component/profileStats.css'
+import moment from 'moment';
+
 import "antd/dist/antd.css";
-import SideNav from "../../antd_side_panel_component/sidebar";
-
-// This is a test Page - Profile Page will go here!
+import "../profile_components/yourgoals_component/ListPRofileGoals.css";
+const { TabPane } = Tabs;
 const { Header, Content, Footer, Sider } = Layout;
-const { SubMenu } = Menu;
+const { RangePicker } = DatePicker;
 
+const dateFormat = 'YYYY/MM/DD';
+const monthFormat = 'YYYY/MM';
+
+const dateFormatList = ['DD/MM/YYYY', 'DD/MM/YY'];
+// function callback(key) {
+//   console.log(key);
+// }
 class ProfileStats extends Component {
-  state = {
-    collapsed: false
-  };
-
-  onCollapse = collapsed => {
-    this.setState({ collapsed });
-  };
-  toggle = () => {
-    this.setState({
-      collapsed: !this.state.collapsed
-    });
-  };
-
   render() {
     return (     
-
-      <Layout style={{ minHeight: "100vh" }}>
-
-            <div><h1>sub profile</h1> </div>
-     
-    </Layout>
-
+      <Layout>
+        <Content>
+        <PageHeader className="site-page-header">
+            <Row>
+              <Col className="your-goals" span={8}>Your Goals</Col>
+              <Col span={8}>        
+                  <RangePicker
+                  defaultValue={[moment('2015/01/01', dateFormat), moment('2015/01/01', dateFormat)]}
+                  format={dateFormat}/>
+              </Col>
+              <Col  className="avatar" span={8}>
+                  <Avatar src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR3-AFt-tdOvYiplq_4dIxIFpEwgT6tpP7e0w&usqp=CAU" />
+              </Col>
+          </Row> 
+        </PageHeader>
+          <h1 className="title" style={{ color: '#5B7BF8'}}>How do You Use Your Time?</h1>
+          <div style={{ padding: 24, minHeight: 600 }}>
+                <ListSortDemo/>  
+          </div>
+        </Content>     
+      </Layout>
     );
   }
 }
 export default ProfileStats;
+
+//TABS MIGHT NOT USE*** <Tabs defaultActiveKey="1" onChange={callback}>
+// <TabPane tab="Tab 1" key="1">
+
+// </TabPane>
+// <TabPane tab="Tab 2" key="2">
+
+// </TabPane>
+// <TabPane tab="Tab 3" key="3">
+
+// </TabPane>
+// </Tabs>

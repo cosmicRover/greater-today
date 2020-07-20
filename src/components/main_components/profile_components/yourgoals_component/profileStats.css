@@ -1,0 +1,41 @@
+.title{
+    font-family: ocr-a-std, monospace;
+    font-weight: medium;
+    color: #5B7BF8;
+    font-size: 30px;
+    margin-left: 17%;
+    margin-top: 2%;
+    margin-bottom: -2%;
+  }
+
+.ant-progress-outer {
+    width: 80%
+}
+
+.rabbit-goal{
+    margin-top: 25%;
+    width: 70%;
+    height: 50%;
+}
+
+.your-goals{
+    color: #5B7BF8;
+    /* opacity: 35%; */
+    font-family: ocr-a-std, monospace;
+    font-weight: medium;
+    font-size: 20px;
+    margin-left:15%;
+}
+.site-page-header{
+    background-color: #ffffff;
+    padding: 10px;
+}
+
+.avatar{
+    margin-right:-15%;
+}
+
+.ant-picker-input > input{
+    color: #5B7BF8;
+    font-family: ocr-a-std, monospace;
+}

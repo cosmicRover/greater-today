@@ -8,25 +8,10 @@ import SideNav from "./components/antd_side_panel_component/sidebar.js";
 import { Provider } from "react-redux"
 import store from "./redux/store"
 
-
-
 function App() {
   //TODO: Change global fonts
 
-  const ContentStyle = styled.div`
-  
-  height: 100vh;
-  background: transparent linear-gradient(0deg, #FFFEF0 0%, #9EE8EB 100%) 0% 0% no-repeat padding-box;
-`;
-
   return (
-    // <AuthProvider>
-    //   <Router>
-    //       <PrivateRoute excat path="/" component={HomePage} />
-    //       <Route exact path="/signin" component={SignInPage} />
-    //   </Router>
-    // </AuthProvider>
-
 
     <Provider store={store}>
       <ApplicationRoutes>
@@ -34,11 +19,14 @@ function App() {
       </ApplicationRoutes>
     </Provider>
 
-
-
   );
 }
 
 export default App;
 
 
+// const ContentStyle = styled.div`
+  
+// height: 100vh;
+// background: transparent linear-gradient(0deg, #FFFEF0 0%, #9EE8EB 100%) 0% 0% no-repeat padding-box;
+// `;
