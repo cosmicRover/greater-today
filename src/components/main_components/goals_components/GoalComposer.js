@@ -11,10 +11,18 @@ import rabbit from '../../../assets/goals_assets/rabbit1.svg'
 import Chip from '@material-ui/core/Chip';
 import ToggleButton from '@material-ui/lab/ToggleButton';
 import ToggleButtonGroup from '@material-ui/lab/ToggleButtonGroup';
+import styled from '@emotion/styled';
+import DateFnsUtils from '@date-io/date-fns';
+import {
+    MuiPickersUtilsProvider,
+    KeyboardTimePicker,
+    KeyboardDatePicker,
+} from '@material-ui/pickers';
 
 export default function FormDialog() {
     const [open, setOpen] = React.useState(true);
     const [alignment, setAlignment] = React.useState('left');
+    const [selectedDate, setSelectedDate] = React.useState(new Date('2014-08-18T21:11:54'));
 
     const handleClickOpen = () => {
         setOpen(true);
@@ -27,6 +35,7 @@ export default function FormDialog() {
     const handleClose = () => {
         setOpen(false);
     };
+    
     const handleChange = (event, newAlignment) => {
         setAlignment(newAlignment);
     };
@@ -39,21 +48,35 @@ export default function FormDialog() {
         console.info('You clicked the Chip.');
     };
 
+    const toggleButtonGroupStyle = styled.div`
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    `;
+
     return (
         <div>
             <Button variant="outlined" color="primary" onClick={handleClickOpen}>
                 Open form dialog
       </Button>
             <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
-                <DialogTitle id="form-dialog-title">Set a new goal</DialogTitle>
+                
+                <DialogTitle id="form-dialog-title">
+                    <span style={{ color: "#6481F6" }}>
+                        Set a new goal.
+                    </span>
+                </DialogTitle>
+                
+                
                 <DialogContent>
 
                     <DialogContentText>
                     </DialogContentText>
 
                     <TextField
+                        // color="#6481F6"
                         autoFocus
-                        margin="dense"
+                        margin="normal"
                         id="name"
                         label="Goal name..."
                         variant="outlined"
@@ -61,7 +84,6 @@ export default function FormDialog() {
                     />
 
                     <TextField
-                        autoFocus
                         margin="dense"
                         id="name"
                         label="Description..."
@@ -71,30 +93,33 @@ export default function FormDialog() {
 
                 </DialogContent>
 
-                <DialogTitle>Choose Goal type</DialogTitle>
+                <DialogTitle><span style={{ color: "#6481F6" }}>
+                    Choose goal type
+                    </span></DialogTitle>
 
-                <DialogContent>
-                    <ToggleButtonGroup
-                        value={alignment}
-                        exclusive
-                        onChange={handleAlignment}
-                        aria-label="text alignment"
-                    >
-                        <ToggleButton varia-label="left aligned">
-                            <img src={rabbit} height="90" width="90" alt="short term"></img>
-                        </ToggleButton>
+                
+                    <DialogContent>
+                        <ToggleButtonGroup
+                            value={alignment}
+                            exclusive
+                            onChange={handleAlignment}
+                            aria-label="text alignment"
+                        >
+                            <ToggleButton varia-label="left aligned" thumbStyle={{ backgroundColor: 'red' }} >
+                                <img src={rabbit} height="90" width="90" alt="short term"></img>
+                            </ToggleButton>
 
-                        <ToggleButton aria-label="centered">
-                            <img src={rabbit} height="90" width="90" alt="long term"></img>
+                            <ToggleButton aria-label="centered">
+                                <img src={rabbit} height="90" width="90" alt="long term"></img>
+                            </ToggleButton>
+                        </ToggleButtonGroup>
 
-                        </ToggleButton>
+                    </DialogContent>
+                
 
-
-                    </ToggleButtonGroup>
-
-                </DialogContent>
-
-                <DialogTitle>Add tags</DialogTitle>
+                <DialogTitle><span style={{ color: "#6481F6" }}>
+                    Add tags
+                    </span></DialogTitle>
 
                 <DialogContent>
                     <Chip
@@ -103,14 +128,7 @@ export default function FormDialog() {
                         onClick={handleClick}
                     />
 
-                    <Chip
-                        variant="outlined"
-                        label="due date"
-                        onClick={handleClick}
-                    />
-
                 </DialogContent>
-
 
                 <DialogActions>
                     <Button onClick={handleClose} color="primary">
