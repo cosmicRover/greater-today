@@ -19,10 +19,12 @@ import {
     KeyboardDatePicker,
 } from '@material-ui/pickers';
 
+import { createMuiTheme } from '@material-ui/core/styles'
+
 export default function FormDialog() {
     const [open, setOpen] = React.useState(true);
     const [alignment, setAlignment] = React.useState('left');
-    const [selectedDate, setSelectedDate] = React.useState(new Date('2014-08-18T21:11:54'));
+    const [selectedDate, setSelectedDate] = React.useState(new Date());
 
     const handleClickOpen = () => {
         setOpen(true);
@@ -48,11 +50,16 @@ export default function FormDialog() {
         console.info('You clicked the Chip.');
     };
 
-    const toggleButtonGroupStyle = styled.div`
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    `;
+    
+    const style = {
+        root: {
+            '&$enabled': {
+                color: 'white',
+            },
+        },
+        disabled: {},
+    };
+    
 
     return (
         <div>
@@ -63,16 +70,13 @@ export default function FormDialog() {
                 
                 <DialogTitle id="form-dialog-title">
                     <span style={{ color: "#6481F6" }}>
-                        Set a new goal.
+                        Set a new goal
                     </span>
                 </DialogTitle>
-                
-                
                 <DialogContent>
 
                     <DialogContentText>
                     </DialogContentText>
-
                     <TextField
                         // color="#6481F6"
                         autoFocus
@@ -96,25 +100,31 @@ export default function FormDialog() {
                 <DialogTitle><span style={{ color: "#6481F6" }}>
                     Choose goal type
                     </span></DialogTitle>
-
-                
+                  
                     <DialogContent>
+
                         <ToggleButtonGroup
+                            
                             value={alignment}
                             exclusive
                             onChange={handleAlignment}
-                            aria-label="text alignment"
-                        >
-                            <ToggleButton varia-label="left aligned" thumbStyle={{ backgroundColor: 'red' }} >
+                            aria-label="text alignment">
+
+                            <ToggleButton varia-label="left aligned"
+                            classes={{root: style.root}}
+                            >
                                 <img src={rabbit} height="90" width="90" alt="short term"></img>
                             </ToggleButton>
 
                             <ToggleButton aria-label="centered">
                                 <img src={rabbit} height="90" width="90" alt="long term"></img>
                             </ToggleButton>
+                        
+                        
                         </ToggleButtonGroup>
 
                     </DialogContent>
+                    
                 
 
                 <DialogTitle><span style={{ color: "#6481F6" }}>
@@ -122,10 +132,15 @@ export default function FormDialog() {
                     </span></DialogTitle>
 
                 <DialogContent>
-                    <Chip
-                        variant="outlined"
-                        label="due date"
-                        onClick={handleClick}
+                    <TextField
+                        id="date"
+                        label="Due date"
+                        type="date"
+                        defaultValue="2017-05-24"
+                        minDate ={Date()}//pass in today's date as min date
+                        InputLabelProps={{
+                            shrink: true,
+                        }}
                     />
 
                 </DialogContent>
