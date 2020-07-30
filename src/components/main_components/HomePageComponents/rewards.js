@@ -2,6 +2,10 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
+import expArrow from '../../../assets/arrow.svg';
+import streak from '../../../assets/fire.svg';
+import coin from '../../../assets/coin.svg';
+import award from '../../../assets/award.svg';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -21,10 +25,9 @@ function Rewards() {
     return (
       <React.Fragment>
         <Grid item xs={6}>
-          <Paper className={classes.paper}>item</Paper>
-        </Grid>
-        <Grid item xs={6}>
-          <Paper className={classes.paper}>item</Paper>
+          <Paper className={classes.paper}>
+              <img src={FormRow.relIcon} alt="Icon" max-height={200} max-width={200} />
+          item</Paper>
         </Grid>
       </React.Fragment>
     );
@@ -34,10 +37,12 @@ function Rewards() {
     <div className={classes.root}>
       <Grid container spacing={1}>
         <Grid container item xs={12} spacing={6}>
-          <FormRow />
+          <FormRow relIcon={expArrow}/>
+          <FormRow relIcon={streak}/>
         </Grid>
         <Grid container item xs={12} spacing={6}>
-          <FormRow />
+          <FormRow relIcon={award}/>
+          <FormRow relIcon={coin}/>
         </Grid>
       </Grid>
     </div>

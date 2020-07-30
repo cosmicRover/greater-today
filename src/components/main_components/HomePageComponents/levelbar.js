@@ -1,17 +1,19 @@
 import React from "react";
 import styled from "@emotion/styled";
+import './levelbar.css';
 
 class LevelBarUpdater extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      percentage: 75
+      percentage: 0.2
     }
   }
 
   render() {
     return (
       <div>
+        <PropsPrinter />
         <LevelBar percentage={this.state.percentage} />
       </div>
     )
@@ -19,34 +21,24 @@ class LevelBarUpdater extends React.Component {
 
 }
 
-const LevelBarStyle = styled.div`
-  height: 20px;
-  width: 350px;
-  border-radius:50px;
-  color:white;
-  box-shadow: 0px 3px 5px #6D597A;
-`;
-
-const LevelBarFillerStyle = styled.div`
-  background: transparent linear-gradient(270deg, #FF9066 0%, #FE8E66 51%, #E56B6F 100%) 0% 0% no-repeat padding-box;
-  height:100%;
-  border-radius: inherit;
-`;
-
 const LevelBar = (props) => {
   return (
-    <LevelBarStyle>
+    <div className='level-bar'>
       <Filler percentage={props.percentage} />
-    </LevelBarStyle>
+    </div>
+  )
+}
+
+const PropsPrinter = (props) => {
+  return(
+    console.log(props.percentage)
   )
 }
 
 
 const Filler = (props) => {
   return (
-  <LevelBarFillerStyle style={{ width: props.percentage }}>
-    <div className="filler" style={{ width: props.percentage }}/>
-  </LevelBarFillerStyle>
+      <div className='filler' style={{width: `${props.percentage}%`}} />
   )
 }
 

@@ -10,6 +10,7 @@ import Typography from "@material-ui/core/Typography";
 import expansion_button from '../../assets/group.svg'
 
 const GoalsBody = ({ title, id, content }) => {
+  //edit this for expansion issues
   const GoalsBodyStyle = styled.div`
     width: 100%;
     height: auto;
