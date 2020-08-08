@@ -13,7 +13,7 @@ Greater Today is a web app that allows people to track their short term and long
 ## Team
 | <a href="http://fvcproductions.com" target="_blank">**Joy Paul**</a> | <a href="http://fvcproductions.com" target="_blank">**Isabella W.**</a> | <a href="http://fvcproductions.com" target="_blank">**Anastasiya Uraleva**</a> |
 | :---: |:---:| :---:|
-| [![Joy Paul](https://avatars3.githubusercontent.com/u/41096232?s=460&u=c7ee0c6c9cd67509fcb984e85a9fb7bf93b02742&v=4&s=50)](https://github.com/cosmicRover)    | [![Isabela Wikovskaya](https://avatars0.githubusercontent.com/u/37942812?s=460&u=dc6f1efe60a7502de019c2b5051b31ec5d288c3a&v=4&s=50)](https://github.com/bellawieck) | [![d](https://avatars0.githubusercontent.com/u/28320272?s=460&v=4&s=50)](http://fvcproductions.com)  |
+| [![Joy Paul](https://avatars3.githubusercontent.com/u/41096232?s=460&u=c7ee0c6c9cd67509fcb984e85a9fb7bf93b02742&v=4&s=50)](https://github.com/cosmicRover)    | [![Isabela Wikovskaya](https://avatars0.githubusercontent.com/u/37942812?s=460&u=dc6f1efe60a7502de019c2b5051b31ec5d288c3a&v=4&s=50)](https://github.com/bellawieck) | [![d](https://avatars0.githubusercontent.com/u/28320272?s=460&v=4&s=50)](https://github.com/APiligrim)  |
 | <a href="https://github.com/bellawieck" target="_blank">`https://github.com/bellawieck`</a> | <a href="https://github.com/cosmicRover" target="_blank">`https://github.com/bellawieck`</a> | <a href="https://github.com/APiligrim" target="_blank">`https://github.com/APiligrim`</a> |
 
 # How to Run this Web App Locally: 
