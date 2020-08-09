@@ -2,44 +2,31 @@ import React from "react";
 import styled from "@emotion/styled";
 import './levelbar.css';
 
-class LevelBarUpdater extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      percentage: 0.2
-    }
-  }
-
-  render() {
-    return (
-      <div>
-        <PropsPrinter />
-        <LevelBar percentage={this.state.percentage} />
-      </div>
-    )
-  }
-
+//need to make the progress bar responsive
+function getWindowDimensions() {
+  const { innerWidth: width, innerHeight: height } = window;
+  return {
+    width,
+    height
+  };
 }
 
-const LevelBar = (props) => {
-  return (
-    <div className='level-bar'>
-      <Filler percentage={props.percentage} />
-    </div>
-  )
-}
+const ProgressBar = ({percentage}) =>{
+  const ProgressBarStyle = styled.button`
+  background: linear-gradient(to right, hotpink ${percentage*3-3}px , white 0%);
+  width: 300px;
+  border-radius: 4px;
+  height: 15px;
+  position: relative;
+  /* &:hover{ ///add hover once text added
+    color: black;
+  } */
+  `;
 
-const PropsPrinter = (props) => {
   return(
-    console.log(props.percentage)
-  )
+  <ProgressBarStyle>
+  </ProgressBarStyle>
+  );
 }
 
-
-const Filler = (props) => {
-  return (
-      <div className='filler' style={{width: `${props.percentage}%`}} />
-  )
-}
-
-export default LevelBar;
+export default ProgressBar;

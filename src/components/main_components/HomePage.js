@@ -82,10 +82,10 @@ const HomePage = () => {
 
     <HomePageStyle>
       <HomeGreeting>Hello, Iza! </HomeGreeting>
-          // <React.Fragment>
-            // <CssBaseline />
-            // <Container maxWidth="55%">
-            //   <Typography component="div" style={{ backgroundColor: 'white', height: '100vh',borderRadius:'25px', maxHeight:'100%', maxWidth:'100%'}}>
+           <React.Fragment>
+             <CssBaseline />
+             <Container maxWidth="55%">
+               <Typography component="div" style={{ backgroundColor: 'white', height: '100vh',borderRadius:'25px', maxHeight:'100%', maxWidth:'100%'}}>
                   <UserInfoContainer>
                     <UpperHalfContainer>
 
@@ -99,7 +99,7 @@ const HomePage = () => {
                           <h4>sample@email.com</h4>
                         </MiniUserInfoBox>
                         <p>Friend Code: 123456789</p>
-                        <LevelBar />
+                        <LevelBar percentage= {47} />
                       </UserInfoBox>
 
                       <UserRewards>
@@ -115,9 +115,9 @@ const HomePage = () => {
 
                     </LowerHalfContainer>
                   </UserInfoContainer>
-          //     </Typography>
-          //   </Container>
-          // </React.Fragment>
+               </Typography>
+             </Container>
+           </React.Fragment>
     </HomePageStyle>
     );
 }
