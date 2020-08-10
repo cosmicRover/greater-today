@@ -39,3 +39,50 @@
     color: #5B7BF8;
     font-family: ocr-a-std, monospace;
 }
+
+@media screen and (max-width: 700px) {
+    .title{
+        font-size: 25px;
+        margin-top: 10px;
+        font-display: center;
+        margin-left: 8%;
+      }
+    .your-goals{
+        font-size: 15px;
+        margin-left:2%;
+    }
+    .avatar{
+        margin-right:-5%;
+        /* margin-top: 5%; */
+        margin-left: 1%;
+    }
+    .ant-picker{
+        margin-left: -10%;
+    }
+}
+@media screen and (max-width: 386px) {
+    .title{
+      font-size: 18px;
+      margin-top: 25px;
+      font-display: center;
+      margin-left: 8%;
+    }
+
+    .your-goals{
+        font-size: 15px;
+        margin-left:2%;
+    }
+    
+    .avatar{
+        /* margin-right:5%;
+        margin-top: 5%; */
+        display: none;
+    }
+    .ant-picker{
+        margin-left: 50%;
+    }
+}
+
+
+
+

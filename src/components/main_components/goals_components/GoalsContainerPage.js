@@ -6,17 +6,19 @@ import { Layout, Menu } from 'antd';
 import styled from "@emotion/styled";
 
 const ContentStyle = styled.div`
- flex-direction: column;
- display: flex;
- align-items: center;
- padding-top: 25px;
- height: 100%;
- background: transparent linear-gradient(0deg, #FFFEF0 0%, #9EE8EB 100%) 0% 0% no-repeat padding-box;
+flex-direction: column;
+display: flex;
+align-items: center;
+padding-top: 45px;
+height: 100%;
+width: 100%;
+ background: url("../goals_component/images/background.png");
 `;
 const { Header, Content, Footer, Sider } = Layout;
 const { SubMenu } = Menu;
 
 class GoalsContainerPage extends Component {
+
     state = {
         collapsed: false
       };
@@ -32,9 +34,13 @@ class GoalsContainerPage extends Component {
 
   render() {
     return (
-        <Layout style={{ minHeight: "100vh" }}>
-      <SideNav/>
-      </Layout>
+      <ContentStyle>
+          <Layout >
+          <SideNav/>
+        </Layout>
+      
+      </ContentStyle>
+
       
     );
   }

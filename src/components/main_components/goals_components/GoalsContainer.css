@@ -1,0 +1,18 @@
+.ant-layout{
+    background: url("/../../goals_component/images/background.png"); 
+    background-repeat:no-repeat;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover;
+    background-position:center;
+  }
+
+.div{
+    flex-direction: column;
+  display: flex;
+  align-items: center;
+  padding-top: 45px;
+  height: 100%;
+  width: 100%;
+}

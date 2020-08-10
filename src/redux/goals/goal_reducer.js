@@ -6,11 +6,11 @@ import GoalsDataModel from "../data_models/goal_data_models"
 const initState = {
 
     goals: [new GoalsDataModel("haha", "nanan"),
-    new GoalsDataModel("haha", "nanan"),
-    new GoalsDataModel("haha", "nanan"),
-    new GoalsDataModel("haha", "nanan"),
-    new GoalsDataModel("haha", "nanan"),
-    new GoalsDataModel("haha", "nanan")]
+            new GoalsDataModel("haha", "nanan"),
+            new GoalsDataModel("haha", "nanan"),
+            new GoalsDataModel("haha", "nanan"),
+            new GoalsDataModel("haha", "nanan"),
+            new GoalsDataModel("haha", "nanan")]
 
 }
 

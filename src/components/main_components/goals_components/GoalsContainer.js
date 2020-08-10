@@ -2,12 +2,18 @@ import React from "react";
 import styled from "@emotion/styled";
 import GoalsTitle from "./GoalsTitle.js";
 import GoalsList from "./GoalsList.js";
+import './GoalsContainer.css'
 
-
-// const GoalsOnlyContainer = styled.div`
-//   max-height:25rem;
-//   overflow: scroll;
-// `;
+const GoalsOnlyContainer = styled.div`
+  max-height:25rem;
+  overflow: scroll;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  padding-top: 45px;
+  height: 100%;
+  width: 100%;
+`;
 
 //return list based on the bool value
 const displayList = ({ isShortTerm }) => {

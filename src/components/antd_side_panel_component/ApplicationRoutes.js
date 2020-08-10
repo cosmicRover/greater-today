@@ -26,16 +26,15 @@ const ContentStyle = styled.div`
  flex-direction: column;
  display: flex;
  align-items: center;
- padding-top: 25px;
+ padding-top: 45px;
  height: 100%;
  width: 100%;
- background: transparent linear-gradient(0deg, #FFFEF0 0%, #9EE8EB 100%) 0% 0% no-repeat padding-box;
 `;
 
 /*always wrap the imported components with content style */
 const StyledContainer = (route) => {
   return (
-    <ContentStyle><GoalsContainer /></ContentStyle>
+    <GoalsContainer />
   );
 }
 
