@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import moment from 'moment';
 // import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { Layout,PageHeader, Avatar, Tabs,DatePicker, Row, Col } from "antd";
-import ListSortDemo from '../profile_components/yourgoals_component/ListProfileGoals.jsx'
+import ListSortDemo from '../profile_components/yourgoals_component/ListProfileGoals.js'
 
 import '../profile_components/yourgoals_component/profileStats.css'
 import "antd/dist/antd.css";
