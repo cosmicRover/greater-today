@@ -1,5 +1,5 @@
 
-# About Greater Today 🐰🐢🎯 
+# About Greater Today 🐰🐢🎯 (under development)
 
 Greater Today is a web app that allows people to track their short term and long term goals. Using the concept of "the Rabbit and the Turtle race," a short term goal is the one that can be achieved in a few steps and thus ties to the rabbit character while long term goals take more time and go with the turtle character. 
 
