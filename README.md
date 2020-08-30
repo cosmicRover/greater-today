@@ -3,13 +3,18 @@
 
 Greater Today is a web app that allows people to track their short term and long term goals. Using the concept of "the Rabbit and the Turtle race," a short term goal is the one that can be achieved in a few steps and thus ties to the rabbit character while long term goals take more time and go with the turtle character. 
 
-
-
-**DEMO**
-
 ![Recordit GIF](https://media.giphy.com/media/XZV4a2czjv4mDxXh64/giphy.gif)
 
+## User Stories 
+- [ ] The user is able to log in through the landing page of the web app
+- [x] The user is able to create and add long term and short term goals
+- [x] The user is able to break down each goal into smaller tasks to track progress
+- [ ] The user is able to see an overview of goals completed, number of streaks, and data visualization of user's activity (profile page)
+- [ ] The user is able to see the number of completed long and short term goals of friends 
+- [ ] The user is able to earn points for each completed goal and reedem for prizes (such as new characters or web stickers) 
 
+
+## Web App Screenshots  
 ## Team
 | <a href="https://github.com/cosmicRover" target="_blank">**Joy Paul**</a> | <a href="https://github.com/bellawieck" target="_blank">**Isabella W.**</a> | <a href="https://github.com/APiligrim" target="_blank">**Anastasiya Uraleva**</a> |
 | :---: |:---:| :---:|
