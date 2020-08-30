@@ -7,6 +7,7 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import rabbit from '../../../assets/goals_assets/rabbit1.svg'
+import clsx from 'clsx'
 
 import Chip from '@material-ui/core/Chip';
 import ToggleButton from '@material-ui/lab/ToggleButton';
@@ -20,11 +21,19 @@ import {
 } from '@material-ui/pickers';
 
 import { createMuiTheme } from '@material-ui/core/styles'
+import { FormControl } from '@material-ui/core';
 
 export default function FormDialog() {
     const [open, setOpen] = React.useState(true);
     const [alignment, setAlignment] = React.useState('left');
-    const [selectedDate, setSelectedDate] = React.useState(new Date());
+    const [selectedDate, setSelectedDate] = React.useState(new Date('2014-08-18'));
+    var [values, setValues] = React.useState({
+        title: 'WOWOW'
+    });
+
+    const handleTextChange = (prop) => (event) => {
+        setValues({ ...values, [prop]: event.target.value });
+    };
 
     const handleClickOpen = () => {
         setOpen(true);
@@ -59,6 +68,13 @@ export default function FormDialog() {
         },
         disabled: {},
     };
+
+    const handleDateChange = (date) => {
+        setSelectedDate(date);
+        console.log(`selected date is ${selectedDate}`)
+    };
+
+    // const handleTextChange =
     
 
     return (
@@ -77,6 +93,7 @@ export default function FormDialog() {
 
                     <DialogContentText>
                     </DialogContentText>
+                    
                     <TextField
                         // color="#6481F6"
                         autoFocus
@@ -85,6 +102,12 @@ export default function FormDialog() {
                         label="Goal name..."
                         variant="outlined"
                         fullWidth
+                        value={values.title}
+                        onChange={event => {
+                            handleTextChange('title')
+                            console.log(`TEXT CHANGED HERE --->> ${values.title}`)
+                            //TODO: Follow this to get values https://www.quora.com/In-React-how-do-you-get-values-from-Material-UI-TextField-components
+                        }}
                     />
 
                     <TextField
@@ -110,6 +133,8 @@ export default function FormDialog() {
                             onChange={handleAlignment}
                             aria-label="text alignment">
 
+                            {/*TODO: Get selectable button */ }    
+                            
                             <ToggleButton varia-label="left aligned"
                             classes={{root: style.root}}
                             >
@@ -138,6 +163,8 @@ export default function FormDialog() {
                         type="date"
                         defaultValue="2017-05-24"
                         minDate ={Date()}//pass in today's date as min date
+                        value = {selectedDate}
+                        onChange={handleDateChange}
                         InputLabelProps={{
                             shrink: true,
                         }}
@@ -151,6 +178,9 @@ export default function FormDialog() {
                     </Button>
                     <Button onClick={handleClose} color="primary">
                         Add Goal
+                        
+                        {/*TODO: onSubmit format and add data to the store */}
+
                     </Button>
                 </DialogActions>
 
