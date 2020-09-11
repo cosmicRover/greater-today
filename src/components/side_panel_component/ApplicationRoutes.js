@@ -9,7 +9,7 @@ import ProfilePage from '../main_components/profilePage'
 import Overview from '../goals_components/GoalsContainerPage'
 import Store from '../main_components/Store'
 import Achievements from '../main_components/Achievements'
-import Friends from '../main_components/Friends'
+import Friends from '../main_components/friends_component/Friends'
 
 import "antd/dist/antd.css";
 
