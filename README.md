@@ -10,11 +10,18 @@ Greater Today is a web app that allows people to track their short term and long
 - [x] The user is able to create and add long term and short term goals
 - [x] The user is able to break down each goal into smaller tasks to track progress
 - [ ] The user is able to see an overview of goals completed, number of streaks, and data visualization of user's activity (profile page)
-- [ ] The user is able to see the number of completed long and short term goals of friends 
+- [x] The user is able to see the number of completed long and short term goals of friends 
 - [ ] The user is able to earn points for each completed goal and reedem for prizes (such as new characters or web stickers) 
 
+## Technical Backbone 
+1. Front-end uses React.js with the library Ant Design for components
+2. Redux is used for goals state managment
+3. Back-end (under development) MongoDB to store and update user's goals
+4. Custum REST API (under development) used for placeholder data
 
-## Web App Screenshots  
+## Web App Screenshots (coming soon)
+
+
 ## Team
 | <a href="https://github.com/cosmicRover" target="_blank">**Joy Paul**</a> | <a href="https://github.com/bellawieck" target="_blank">**Isabella W.**</a> | <a href="https://github.com/APiligrim" target="_blank">**Anastasiya Uraleva**</a> |
 | :---: |:---:| :---:|
