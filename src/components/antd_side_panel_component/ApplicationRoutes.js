@@ -51,12 +51,12 @@ const StyledStore = (route) => {
 }
 const StyledAchievements = (route) => {
   return (
-    <ContentStyle><Achievements /></ContentStyle>
+    <Achievements />
   );
 }
 const StyledFriends = (route) => {
   return (
-    <ContentStyle><Friends /></ContentStyle>
+    <Friends />
   );
 }
 
